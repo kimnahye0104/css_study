@@ -1,0 +1,47 @@
+/* css디자인 */
+/* #top {background-color: aqua;}
+#top main {background-color: yellow;}
+#top main h1 {background-color: lime;}
+#top main p {background-color: pink;} */
+.title {background-color: pink;}
+.title h1 {color: red;}
+.title .txt_wrap {background-color: blue;}
+.title .txt_wrap .txt_1 {background-color: aqua;}
+.title .txt_wrap .txt_1 .sub_title {color: red;}
+.title .txt_wrap .txt_1 .name {background-color: yellow;}
+/* 선택자 연습 2 */
+#weather {background-color: lightblue;}
+#weather h1 {color: red;}
+#weather .area {color: blue;}
+#weather .temperature {background-color: aqua; color: blue;}
+#weather p {color: red;}
+#weather .sub_title {background-color: yellow;}
+#weather .humidity {background-color: green; color: #fff;}
+#weather .dust {background-color: red; color: #fff;}
+#weather .result {color: blueviolet;}
+/* 개인 연습 practice */
+/* .practice {width: 500px;  height: 500px; background-color: yellow; border: 10px solid pink; margin: 10px 0 0;}
+.practice .box1 {width: 100px; height: 100px; background-color: lightblue;}
+.practice .box1 .blue_txt {color: blue;}
+.practice .box2 {width: 100px; height: 100px; background-color: pink; margin-left: 400px;}
+.practice .box3 {width: 100px; height: 100px; background-color: green; color: #fff; margin-left: 100px;}
+.practice .box4 {width: 100px; height: 100px; background-color: blue; color: #fff;}
+.practice .box4:hover {background-color: red; width: 200px;} */
+/*선택자 연습 3*/
+#news {margin: 30px 0 0; background-color: aqua;}
+#news > a {background-color: red;}
+#news .box {background-color: blue;}
+#news .box a {color: #fff;}
+#news .box a h2 {background-color: yellow; color: blue;}
+#news .box a p {color: red;}
+#news > p {background-color: pink;}
+/* 선택자 연습 4 */
+#papago {background-color: lightgray; margin-top: 100px;}
+#papago nav {background-color: pink;}
+#papago nav a {background-color: red;}
+#papago main {background-color: pink;}
+#papago main h1 {background-color: yellow;}
+#papago main h1 a {background-color: aqua;}
+#papago main > a {background-color: yellow;}
+#papago > a {background-color: lightgreen;} 
+/* 8줄 */
