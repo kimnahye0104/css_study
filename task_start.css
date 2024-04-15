@@ -1,0 +1,63 @@
+/* 0415~0416 과제 */
+/* ver0 */
+h1 {background-color: #f00; color: #000;}
+.test_box > h1 {background-color: orange; color: #fff;}
+.test_box > h2 {background-color: orange; color: #fff;}
+.test_box h3 {background-color: yellow;}
+.test_box h4 {background-color: yellow;}
+.test_box #title1 {background-color: greenyellow; color: #000;}
+.test_box #title2 {background-color: greenyellow; color: #000;}
+.test_box > p {background-color: lightgray;}
+.test_box > p span {background-color: #000; color: #f00;}
+.test_box > p q {background-color: #000; color: #f00;}
+.test_box > p code {background-color: #000; color: #f00;}
+.test_box > p sup {background-color: #000; color: #f00;}
+.test_box > p sub {background-color: #000; color: #f00;}
+.test_box blockquote {background-color: greenyellow;}
+.test_box .test1 {background-color: blue; color: #fff;}
+.test_box .test2 {background-color: blue; color: #fff;}
+.test_box .test3 {background-color: blue; color: #f00;}
+.test_box .test4 {background-color: blue; color: #f00;}
+.test_box #wrap {background-color: navy;}
+.test_box #wrap p {background-color: navy; color: #fff;}
+/* ver1 */
+header {background-color: orange;}
+header h1 {background-color: orangered;}
+header form {background-color: yellow;}
+header form input {background-color: greenyellow;}
+header a {background-color: blue; color: #fff;}
+/* ver2 */
+.box {background-color: orange;}
+.box a {background-color: yellow;}
+.box .contents {background-color: greenyellow;}
+.box .contents p {background-color: yellow;}
+.box .img {background-color: blue; color: #fff;}
+.box .img img {background-color: black;}
+/* ver3 */
+main {background-color: orange;}
+main aside {background-color: orangered;}
+main aside h2 {background-color: yellow;}
+main aside ul {background-color: yellow;}
+main aside ul li {background-color: yellow;}
+main aside ul li > a {background-color: yellow;}
+main aside ul li .last {background-color: yellow;}
+main aside ul li .last a {background-color: greenyellow;}
+main section {background-color: lightgray;}
+main section .top {background-color: lightblue;}
+main section .top h1 {background-color: lightblue; color: blue;}
+main section .top p {background-color: lightblue;}
+main section article {background-color: lightblue;}
+main section article p {background-color: yellow;}
+/* ver4 */
+#t {background-color: lightgreen;}
+#t thead {background-color: lightgreen;}
+#t thead tr {background-color: lightgreen;}
+#t thead tr th {background-color: green;}
+#t tbody {background-color: lightgreen;}
+#t tbody tr {background-color: lightgreen;}
+#t tbody tr td {background-color: yellow;}
+#t tfoot {background-color: lightgreen;}
+#t tfoot tr {background-color: lightgreen;}
+#t tfoot tr th {background-color: lightgreen;}
+#t tfoot tr td {background-color: lightgreen;}
+#t tfoot tr td em {background-color: yellow;}
