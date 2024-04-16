@@ -1,0 +1,20 @@
+main {
+    font-family: "Noto Sans KR", "맑은 고딕", sans-serif;
+}
+/* .knh {margin-top:30px; color: green; letter-spacing: 10px;} */
+/* 선택자 */
+main .first {color: #000}
+main .first h1 {
+    font-family: "Jua", sans-serif;
+}
+main .first p {
+    font-family: "Nanum Pen Script", san-serif;
+}
+main .first p em {color: #000}
+main .second {color: #000}
+main .second h1 {
+    font-family: "Nanum Myeongjo", serif;
+}
+main .second p {
+    font-family: "Single Day", san-serif;
+}
