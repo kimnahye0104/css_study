@@ -85,10 +85,11 @@ main .contents_bg .strategy .strategy_cont li {
     margin-left : -11px;
     padding-top: 51px;
     box-sizing: border-box;
+    overflow: hidden; /* (박스가 자꾸 올라가서..가운데 정렬 안되서 넣어준 값) */
 }
 main .contents_bg .strategy .strategy_cont li:first-child{margin-left: 0;}
 main .contents_bg .strategy .strategy_cont li .txtbox {
-    width: 159px; height: 79px;
+    width: 139px; height: 79px;
     display: inline-block;
     text-align: center;
 }
@@ -97,8 +98,12 @@ main .contents_bg .strategy .strategy_cont li .txtbox p {
     line-height: 23px;
 }
 main .contents_bg .strategy .strategy_cont li .txtbox p.tit {
-    padding-bottom: 10px;
     font-weight: 600; /* 폰트 굴기 bold 600 */
+    line-height: 23px;
     text-decoration-line: underline;
+    padding-bottom: 10px;
 }
-/* 마지막 박스에 제목 두줄로 하는 거 왜 안되냐고.. */
+/* 마지막 박스에 제목 두줄로 하는 거 왜 안되냐고.. + 오오 집에서 하니까 됐당....*/
+main .contents_bg .strategy .strategy_cont .box5 {
+    padding-top: 39px; /* 다섯번째 원형 박스는 다른 1~4box랑 위쪽 여백이 다르니까 다시 값 주기 */
+}
