@@ -2,7 +2,7 @@
 main {
     font-family: "Noto Sans KR", "맑은 고딕", sans-serif;
     width: 100%;
-    height: 1024px;
+    /*height: 1024px;*/
     margin: 0 auto; 
     text-align: center;
 }
@@ -20,8 +20,8 @@ main > p {
 /* contents_bg 영역 */
 main .contents_bg {
     padding-top: 40px;
-    padding-bottom: 40px;
     background-color: #eee;
+    padding-bottom: 40px;
 }
 main .contents_bg > p {padding-bottom: 30px; letter-spacing: -0.2px;}
 main .contents_bg p.value_txt {line-height: 30px;}
@@ -29,7 +29,8 @@ main .contents_bg p.value_txt em {font-weight: 500;}
 /* company_vision 영역 */
 main .contents_bg .vision {}
 main .contents_bg .vision h2,
-main .contents_bg .goal h2 {
+main .contents_bg .goal h2,
+main .contents_bg .strategy h2 {
     padding-top: 80px; padding-bottom: 30px;
     font-size: 1.875rem; /* 30px */
     line-height: 30px;
@@ -46,9 +47,10 @@ main .contents_bg .goal h2 {/* 공통서식 태그에 작성함 */}
 main .contents_bg .goal .goal_box_g {}
 main .contents_bg .goal .goal_box_g div {
     display: inline-block;
-    width: 250px; height: 250px;
+    width: 250px;  height: 250px;
     border-radius: 50%; /* 상대값으로 해두면, 가로세로값을 바꿔도 이 값은 변경하지 않아도 됨. */
     color: #fff;
+    box-sizing: border-box;
     box-shadow: 0 0 6px rgba(0,0,0,0.25);
 }
 main .contents_bg .goal .goal_box_g div p:last-child {
@@ -69,3 +71,34 @@ main .contents_bg .goal .goal_box_g .goal_box3 {
     background-color: #F3C300;
     margin-left: -20px;
 }
+/* 4월17일 수요일 과제 : strategy 시작 */
+.strategy {}
+main .contents_bg .strategy h2 {/* 공통서식 작성 */}
+main .contents_bg .strategy .strategy_cont {}
+main .contents_bg .strategy .strategy_cont li {
+    text-align: center;
+    display: inline-block;
+    width: 180px; height: 180px;
+    background-color: #eee;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0,0,0,0.25);
+    margin-left : -11px;
+    padding-top: 51px;
+    box-sizing: border-box;
+}
+main .contents_bg .strategy .strategy_cont li:first-child{margin-left: 0;}
+main .contents_bg .strategy .strategy_cont li .txtbox {
+    width: 159px; height: 79px;
+    display: inline-block;
+    text-align: center;
+}
+main .contents_bg .strategy .strategy_cont li .txtbox p {
+    letter-spacing: -0.2px;
+    line-height: 23px;
+}
+main .contents_bg .strategy .strategy_cont li .txtbox p.tit {
+    padding-bottom: 10px;
+    font-weight: 600; /* 폰트 굴기 bold 600 */
+    text-decoration-line: underline;
+}
+/* 마지막 박스에 제목 두줄로 하는 거 왜 안되냐고.. */
