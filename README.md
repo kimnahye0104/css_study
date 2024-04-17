@@ -30,3 +30,53 @@
 * "메인 글꼴", "후보 글꼴", (후보제한없음 sans-serif)
 * 후보글꼴은 메인글꼴과 비슷한 글꼴으로 연결해야 한다.
 * 글꼴에 한글, 공백이 있으면, 따옴표가 필요하다.
+## font-size
+* 웹글꼴 평균 16px
+* 사용 단위 px, %, em, rem
+* 절대값: px, 상대값: %, em, rem (권장-사용하는 디바이스에 따라 크기를 조정하겠다.)
+## 선택자 우선 순위
+* #아이디(3) > .클래스(2) > 태그(1)
+1. 다음 중 우선 순위가 가장 높고 낮은 선택자는?
+* `#box .a .b p {}` : 3+2+2+1 = 8점
+* `#box #a .b p {}` : 3+3+2+1 = 9점
+* `#wrap #box .a {}` : 3+3+2 = 8점
+* `#wrap .a .b p {}` : 3+2+2+1 = 8점
+2. 다음 중 우선 순위가 가장 높고 낮은 선택자는?
+* `#wrap #top .top_left .btn a{}`
+* `#wrap .mainimg .btn a{}`
+* `#wrap .top_left .icon1 p a{}`
+* `#wrap .top_left #icon p a img{}`
+## color
+* 영문명 직접 입력 ex) 테스트용으로 주로 밝은색을 사용한다.
+* auqa, lime, yellow, coral, 등등
+* 헥사코드 입력 최소값 0 ~ 최대값 f RGB 코드 기준
+* RGB 웹 색상 기준으로 색상을 섞을 수록 밝아진다.
+* #Hex #000000 == #000, #ff00cc -> #f0c
+* rbga(red,green,blue,alpha) => rbga(0,0,255,0.6) : 블루 색상으로 alpha 투명도 60%
+## box css
+* **width, height, display, box-sizing, box-shadow**
+### display
+`block, inline, inline-block`
+* 특정 태그가 화면에 어떻게 표시될지 지정하는 속성
+* 디자인을 위해서 필요할때 display속성을 활용해 inline과 block을 설정해준다.
+* `block` : 새로운 행, 크기, 여백 인식
+* `inline` : 내용만큼 크기 인식, (그외 크기인식 불가능)
+* `inline-block` : 내용만큼 크기 인식, (크기 추가설정가능), 옆으로 정렬
+### box-sizing
+* `box-sizing : border-box`
+* 요소의 너비와 높이를 계산할 때 테두리, 안쪽여백(padding)까지 포함해서 계산하는 속성
+* 속성 미적용시 : w100 + h100 + padding-top20 = 100x120
+* 속성 적용시 : w100 + h100 + padding-top20 = 100x100
+### width, height
+* 요소의 너비와 높이
+* 절대값 px, 상대값 %, 화면 상대값 vw, vh
+* 상대값 처리는 0~100% 사이 값만 사용한다.
+### box-shadow
+* `box-shadow : x축 y축 blur값 색상;`
+* 그림자를 넣어주는 속성
+* 색상은 `rgba(red,green,blue,alpha값);`로 하면 투명도까지 미세하게 조정 가능.
+### border-radius
+* `border-radius: 값(px, %);`
+* 둥근 테두리를 만들어주는 속성
+* 원을 만드려면, 절대값 = 가로세로(100px)의 1/2인 50px
+* 원을 만드려면, 상대값 = 가로세로(100px)의 50% (절반값%)

@@ -1,4 +1,5 @@
 /*html 초기화*/
+* {box-sizing: border-box;}
 body,html,
 h1,h2,h3,h4,h5,h6,
 p,ul,ol,li,dl,dt,dd,

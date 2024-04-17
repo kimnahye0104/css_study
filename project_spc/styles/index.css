@@ -1,3 +1,4 @@
+* {box-sizing: border-box;}
 main {
     font-family: "Noto Sans KR", "맑은 고딕", sans-serif;
     width: 100%;
@@ -19,6 +20,7 @@ main > p {
 /* contents_bg 영역 */
 main .contents_bg {
     padding-top: 40px;
+    padding-bottom: 40px;
     background-color: #eee;
 }
 main .contents_bg > p {padding-bottom: 30px; letter-spacing: -0.2px;}
@@ -26,7 +28,8 @@ main .contents_bg p.value_txt {line-height: 30px;}
 main .contents_bg p.value_txt em {font-weight: 500;}
 /* company_vision 영역 */
 main .contents_bg .vision {}
-main .contents_bg .vision h2 {
+main .contents_bg .vision h2,
+main .contents_bg .goal h2 {
     padding-top: 80px; padding-bottom: 30px;
     font-size: 1.875rem; /* 30px */
     line-height: 30px;
@@ -36,4 +39,33 @@ main .contents_bg .vision h2 {
 main .contents_bg .vision p {
     font-size: 2.188rem; /* 35px */
     line-height: 45px;
+}
+/* goal 영역 시작 */
+main .contents_bg .goal {}
+main .contents_bg .goal h2 {/* 공통서식 태그에 작성함 */}
+main .contents_bg .goal .goal_box_g {}
+main .contents_bg .goal .goal_box_g div {
+    display: inline-block;
+    width: 250px; height: 250px;
+    border-radius: 50%; /* 상대값으로 해두면, 가로세로값을 바꿔도 이 값은 변경하지 않아도 됨. */
+    color: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
+main .contents_bg .goal .goal_box_g div p:last-child {
+    font-size: 1.563rem; /* 25px */
+    letter-spacing: -0.2px;
+}
+main .contents_bg .goal .goal_box_g p.icon {padding-bottom: 20px; padding-top: 67px;}
+main .contents_bg .goal .goal_box_g p.icon img {width: 60px; height: 60px;}
+main .contents_bg .goal .goal_box_g .goal_box1 {
+    background-color: #36B4E5;
+}
+main .contents_bg .goal .goal_box_g .goal_box2 {
+    background-color: #fff;
+    color: #000;
+    margin-left: -20px;
+}
+main .contents_bg .goal .goal_box_g .goal_box3 {
+    background-color: #F3C300;
+    margin-left: -20px;
 }
