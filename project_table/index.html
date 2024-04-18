@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <header><span id="myname">나혜가 만든 네이버 결제 내역 페이지</span></header>
+    <header>
+        <p id="myname">나혜가 만든 네이버 결제 내역 페이지</p>
+    </header>
     <main>
         <div class="top">
             <h1>웹툰에서 <span>결제한 내역</span>을<br>안내해 드립니다.</h1>
@@ -29,27 +31,41 @@
         <table class="buy_list">
             <thead>
                 <tr>
-                    <th>분류</th>
+                    <th class="first">분류</th>
                     <th>상품명</th>
-                    <th>구입유형</th>
-                    <th>가격</th>
+                    <th class="align">구입유형</th>
+                    <th class="align">가격</th>
                     <th>비고</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>만화</td>
+                    <td class="first">만화</td>
                     <td>유미의 세포들 390화 시러시러</td>
-                    <td>대여</td>
-                    <td><em>쿠키 2개</em></td>
+                    <td class="align">대여</td>
+                    <td class="align"><em>쿠키 2개</em></td>
                     <td></td>
+                </tr>
+                <tr>
+                    <td class="first">연습</td>
+                    <td>표의 행 높이를 안 주고 여백을 주면 아래로 늘어남</td>
+                    <td class="align">연습html</td>
+                    <td class="align"><em>4월18일</em></td>
+                    <td>^0^</td>
+                </tr>
+                <tr>
+                    <td class="first">연습</td>
+                    <td>table에 tr 통째로 추가하고, 891px 삭제해봄</td>
+                    <td class="align">연습html</td>
+                    <td class="align"><em>4월18일</em></td>
+                    <td>^0^</td>
                 </tr>
             </tbody>
         </table>
         <a href="#" class="detail_view">구입내역 자세히 보기</a>
         <div class="btm">
-            <a href="#" class="home">웹툰홈 가기</a>
-            <a href="#" class="keepbox">보관함 보기</a>
+            <a href="https://comic.naver.com/index" class="home">웹툰홈 가기</a>
+            <a href="https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fcomic.naver.com%2Findex" class="keepbox">보관함 보기</a>
         </div>
     </main>
 </body>
