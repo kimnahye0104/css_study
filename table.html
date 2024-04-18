@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table 태그 (표태그)-0418</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- 내부스타일시트 -->
+    <style>
+        /* .t1, .t1 tr, .t1 tr td {border: 두께 모양 색깔; = border: 1px solid #000;}
+        .t2, .t2 tr, .t2 tr td {border: 2px dotted #f00;}
+        .t3, .t3 tr, .t3 tr td {border: 3px dashed #00f;} */
+        table, table tr, table tr th, table tr td {border: 1px solid #f00;}
+        .t2, .t2 tr, .t2 tr th, .t2 tr td {border-color: #00f;}
+        .t3, .t3 tr, .t3 tr td {border-color: hotpink;}
+        .t4, .t4 tr, .t4 tr th, .t4 tr td {border-color: green;}
+    </style>
+</head>
+<body>
+    <table class="t1">
+        <tr>
+            <td>1행 1열</td>
+        </tr>
+    </table>
+    <hr>
+    <table class="t2">
+        <tr>
+            <th>1행 1열</th>
+        </tr>
+        <tr>
+            <td>2행 1열</td>
+        </tr>
+    </table>
+    <hr>
+    <table class="t3">
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+        </tr>
+        <tr>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+        </tr>
+        <tr>
+            <td>3행 1열</td>
+            <td>3행 2열</td>
+        </tr>
+    </table>
+    <hr>
+    <table class="t4">
+        <thead>
+            <tr>
+                <th>제목</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>내용</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>결과</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
