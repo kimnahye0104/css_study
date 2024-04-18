@@ -1,0 +1,94 @@
+ /* naver 공통 초록 글자  #03c75a */
+main {
+    font-family: "Noto Sans KR", sans-serif;
+    width: 1024px; height: 891px;
+    margin: 10px auto;
+    padding-left: 46px;
+    border: 1px solid #000;
+    /* display: inline-block;
+    text-align: center; */   
+}
+main .top {}
+main .top h1,
+main .top h1 span {
+    font-size: 3.125rem; /* 50px */
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+}
+main .top h1 {
+    padding-top: 49px;
+}
+main .top h1 span {
+    color: #03c75a;
+}
+main p {
+    letter-spacing: -0.4px;
+}
+main .top h2,
+main .top h2 .user {font-size: 1.5rem; /* 24px */}
+main .top h2 {
+    padding-top: 49px;
+    padding-bottom: 49px;
+}
+main .top h2 .user {
+    color: #03c75a;
+}
+main .top p {line-height: 34px;}
+main .top p a{text-decoration-line: underline;}
+main > h2 {
+    font-size: 1.563rem;
+    padding-top: 49px;
+    padding-bottom: 22px;
+}
+main > h2 span {color: #aaa;}
+main .buy_list {
+    font-size: 1.25rem; /* 20px */
+    width: 933px;
+}
+main .buy_list thead,
+main .buy_list tbody {padding: 30px 0;}
+
+main .buy_list thead {
+    height: 50%;
+    border-top: 3px solid #000 ;
+}
+main .buy_list thead,
+main .buy_list tbody {border-bottom: 1px solid #aaa;}
+main .buy_list thead th {}
+
+main .buy_list tbody {
+    height: 50%;
+}
+main .buy_list tbody td {}
+
+main .buy_list tbody td em {
+    color: #03c75a;
+}
+/* 표에 높이 안주고 대신 padding 값으로 여백을 만들었다. */
+
+main .buy_list tr * {padding: 15px 0;}
+
+main .detail_view {
+    text-decoration-line: underline;
+    display: inline-block; 
+    /* a태그는 기본적으로 인라인태그이다. 최근에 블록태그 도 가지게 되어서 inline-block을 주지 않으면, 가로세로 값을 인식 못한다. */
+    padding-top: 11px;
+    padding-left: 800px;
+}
+main .btm {
+    display: inline-block;
+    padding-top: 130px;
+    padding-left: 290px;
+}
+main .btm a {
+    background-color: #03c75a;
+    color: #fff;
+    font-size: 1.25rem; 
+    width: 178px; height: 64px;
+    padding: 20px 40px;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+main .btm .home {}
+main .btm .keepbox {margin-left: 15px;}
