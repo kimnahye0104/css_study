@@ -7,15 +7,14 @@ header #myname {
     line-height: 30px;
     font-size: 1.25rem;
 }
- main {
+main {
     font-family: "Noto Sans KR", sans-serif;
     width: 1024px; /* height: 890px; 표 table tr 추가하는 거 테스트겸 높이 지우기*/
     margin: 20px auto;
-    padding: 0 46px;
+    padding: 46px 46px 98px 46px;
     border: 1px solid #000;
     /* display: inline-block;
     text-align: center; */  
-    box-sizing: border-box;
 }
 main .top {}
 main .top h1,
@@ -25,9 +24,7 @@ main .top h1 span {
     line-height: 1.2;
     letter-spacing: -0.4px;
 }
-main .top h1 {
-    padding-top: 49px;
-}
+main .top h1 {}
 main .top h1 span {
     color: #03c75a;
 }
@@ -35,7 +32,8 @@ main p {
     letter-spacing: -0.4px;
 }
 main .top h2,
-main .top h2 .user {font-size: 1.5rem; /* 24px */}
+main .top h2 .user,
+main > h2 span {font-size: 1.5rem; /* 24px */}
 main .top h2 {
     padding-top: 49px;
     padding-bottom: 49px;
@@ -43,7 +41,7 @@ main .top h2 {
 main .top h2 .user {
     color: #03c75a;
 }
-main .top h2 .user:hover{text-decoration-line: underline;}
+main .top h2 .user:hover{text-decoration: underline;}
 main .top p {line-height: 34px;}
 main .top p a{text-decoration-line: underline;}
 main > h2 {
@@ -51,7 +49,7 @@ main > h2 {
     padding-top: 49px;
     padding-bottom: 22px;
 }
-main > h2 span {color: #aaa;}
+main > h2 span {color: #aaa; padding-left: 5px;}
 main .buy_list {
     font-size: 1.25rem; /* 20px */
     width: 933px;
@@ -80,8 +78,8 @@ main .buy_list tr .first {padding-left: 15px;}
 
 main .detail_view {
     display: inline-block;
-    text-decoration-line: underline;
-    /* a태그는 기본적으로 인라인태그이다. 최근에 블록태그 도 가지게 되어서 inline-block을 주지 않으면, 가로세로 값을 인식 못한다. */
+    /* a태그는 inline, block 특징을 모두 가질 수 있지만, 기본적으로 고유한 속성은 inline이다. 따라서 display: inline-block을 주지 않으면, 가로세로 값, 여백 값을 인식 못한다. */
+    text-decoration: underline;
     padding-top: 11px;
     width: 100%;
     text-align: right;
@@ -91,21 +89,18 @@ main .detail_view:hover {
 }
 main .btm {
     display: inline-block;
-    width: 100%;
+    width: 100%;  /* 정확한 가로값은 930px */
     text-align: center;
     padding-top: 160px;
-    padding-bottom: 49px;
 }
 main .btm a {
-    display: inline-block;
-    text-align: center;
-    line-height: 64px;
     background-color: #03c75a;
     color: #fff;
     font-size: 1.25rem; 
-    width: 178px; height: 64px;
+    padding: 20px 40px;
     border-radius: 30px;
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 main .btm a:hover {
     background-color: #0f8042;

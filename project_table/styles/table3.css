@@ -1,0 +1,98 @@
+main {
+    font-family: "Noto Sans KR", sans-serif;
+    width: 1024px;
+    height: 628px;
+    margin: 30px auto;
+    border: 1px solid #000;
+    padding: 30px 102px;
+    letter-spacing: -0.2px;
+}
+/* main end */
+.title {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.title h1 {font-size: 3.125rem;}
+.title h1,
+.title span{
+    font-weight: 700;
+    letter-spacing: -0.2px;
+}
+.title p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: 700;
+    width: 100%;
+}
+.title h1 span {color: #f00;}
+/* main > title end */
+.t {
+    border: 3px solid #000;
+    border-left: 0; border-right: 0;
+    width: 820px;
+    margin-top: 65px;
+}
+.t thead tr {background-color: #eee;}
+.t thead tr th {font-weight: 500;}
+.t thead tr th,
+.t tbody tr td {
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 60px;
+    border-bottom: 1px solid #aaa;
+}
+.t tbody tr td img {margin-left: 9px;}
+.t tbody tr td:nth-child(4) a {
+    padding: 5px 20px;
+    border: 2px solid #f00;
+    border-radius:50px;
+    color: #f00;
+}
+.t tbody tr td:nth-child(4) a .down {
+    display: inline-block;
+    width: 16px; height: 16px;
+    margin-left: 9px;
+}
+.t tbody tr td:nth-child(4) a:hover {
+    background-color: #f00;
+    color: #fff;
+}
+
+.next_page_btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 65px;
+}
+.next_page_btn a {
+    display: inline-block;
+    background-color: #fff;
+    width: 24px; height: 26px;
+    text-align: center;
+    line-height: 26px;
+    margin-left: 5px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
+.next_page_btn a:nth-child(1) {
+    /* background-color: #f00;
+    color: #fff; */
+}
+
+.next_page_btn a:nth-child(4),
+.next_page_btn a:nth-child(5) {
+    background-color: #eee;
+    display: inline-block;
+    text-align: center;
+}
+.next_page_btn a:nth-child(4) img {
+    width: 18px; height: 12px;
+}
+.next_page_btn a:nth-child(5) img {
+    width: 14px; height: 12px;
+    line-height: 12px;
+}
+.next_page_btn a:hover {
+    background-color: #f00;
+    color: #fff;
+}
