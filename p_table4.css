@@ -1,0 +1,65 @@
+main {
+    font-family: "Noto Sans KR", sans-serif;
+    margin: 0 auto;
+    width: 860px;
+    border: 1px solid #aaa;
+}
+main p{
+    font-size: 1.5rem; /* 24px */
+    color: #888;
+    line-height: 36px;
+    letter-spacing: -0.4px;
+    text-align: center;
+}
+main p:nth-child(1) {
+    width: 750px;
+    margin: 60px auto 0;
+}
+main .t_tit {
+    margin: 65px 0 10px 0;
+    color: #000;
+    font-weight: 700;
+}
+main .t {
+    margin: 0 56px 60px;
+    width: 745px;
+    font-size: 1.25rem; /* 20px */
+    color: #000;
+}
+main .t tr th,
+main .t tr td {border: 1px solid #aaa;}
+
+main thead tr th {
+    text-align: center;
+    padding: 15px 65px;
+    background-color: #00155E; color: #fff;
+    font-weight: 700;
+}
+main tbody tr td {
+    text-align: center;
+    padding: 15px 0;
+}
+main tbody tr td:nth-child(2) {
+    width: 105px;
+}
+main tbody tr td:nth-child(3) {
+    width: 207px;
+}
+/* 0월00일 (요일) 열 디자인 */
+main tbody tr:nth-child(1) td:nth-child(1),
+main tbody tr:nth-child(3) td:nth-child(1),
+main tbody tr:nth-child(5) td:nth-child(1) {
+    font-weight: 700; /* color: red; */
+}
+/* 해당동 글자색 디자인 */
+main tbody tr:nth-child(1) td:nth-child(3),
+main tbody tr:nth-child(2) td:nth-child(2),
+main tbody tr:nth-child(3) td:nth-child(3),
+main tbody tr:nth-child(4) td:nth-child(2),
+main tbody tr:nth-child(5) td:nth-child(3),
+main tbody tr:nth-child(6) td:nth-child(2) {color: #888;}
+/* 작업시간 큰열 1개 td 글자 디자인 */
+main tbody tr:nth-child(1) td:nth-child(4) {
+    font-weight: 700;
+    line-height: 30px;
+}
