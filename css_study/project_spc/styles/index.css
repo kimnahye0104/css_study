@@ -1,0 +1,109 @@
+* {box-sizing: border-box;}
+main {
+    font-family: "Noto Sans KR", "맑은 고딕", sans-serif;
+    width: 100%;
+    /*height: 1024px;*/
+    margin: 0 auto; 
+    text-align: center;
+}
+main h1 {
+    padding-bottom: 14px; /* 경영이념 위 여백 */
+    font-size: 3.125rem; /* 50px */
+    font-weight: 700; /* bold-700 */
+}
+main > p {
+    padding-bottom: 40px;
+    font-weight: 300; /* light-300 */
+    letter-spacing: -0.2px;
+}
+/* p 자간 공통 을 만들어서, 값을 여러번 쓰기 않게 하는게 좋음*/
+/* contents_bg 영역 */
+main .contents_bg {
+    padding-top: 40px;
+    background-color: #eee;
+    padding-bottom: 40px;
+}
+main .contents_bg > p {padding-bottom: 30px; letter-spacing: -0.2px;}
+main .contents_bg p.value_txt {line-height: 30px;}
+main .contents_bg p.value_txt em {font-weight: 500;}
+/* company_vision 영역 */
+main .contents_bg .vision {}
+main .contents_bg .vision h2,
+main .contents_bg .goal h2,
+main .contents_bg .strategy h2 {
+    padding-top: 80px; padding-bottom: 30px;
+    font-size: 1.875rem; /* 30px */
+    line-height: 30px;
+    letter-spacing: -0.2px;
+    color: #36B4E5;
+}
+main .contents_bg .vision p {
+    font-size: 2.188rem; /* 35px */
+    line-height: 45px;
+}
+/* goal 영역 시작 */
+main .contents_bg .goal {}
+main .contents_bg .goal h2 {/* 공통서식 태그에 작성함 */}
+main .contents_bg .goal .goal_box_g {}
+main .contents_bg .goal .goal_box_g div {
+    display: inline-block;
+    width: 250px;  height: 250px;
+    border-radius: 50%; /* 상대값으로 해두면, 가로세로값을 바꿔도 이 값은 변경하지 않아도 됨. */
+    color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
+main .contents_bg .goal .goal_box_g div p:last-child {
+    font-size: 1.563rem; /* 25px */
+    letter-spacing: -0.2px;
+}
+main .contents_bg .goal .goal_box_g p.icon {padding-bottom: 20px; padding-top: 67px;}
+main .contents_bg .goal .goal_box_g p.icon img {width: 60px; height: 60px;}
+main .contents_bg .goal .goal_box_g .goal_box1 {
+    background-color: #36B4E5;
+}
+main .contents_bg .goal .goal_box_g .goal_box2 {
+    background-color: #fff;
+    color: #000;
+    margin-left: -20px;
+}
+main .contents_bg .goal .goal_box_g .goal_box3 {
+    background-color: #F3C300;
+    margin-left: -20px;
+}
+/* 4월17일 수요일 과제 : strategy 시작 */
+.strategy {}
+main .contents_bg .strategy h2 {/* 공통서식 작성 */}
+main .contents_bg .strategy .strategy_cont {}
+main .contents_bg .strategy .strategy_cont li {
+    text-align: center;
+    display: inline-block;
+    width: 180px; height: 180px;
+    background-color: #eee;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0,0,0,0.25);
+    margin-left : -11px;
+    padding-top: 51px;
+    box-sizing: border-box;
+    overflow: hidden; /* (박스가 자꾸 올라가서..가운데 정렬 안되서 넣어준 값) */
+}
+main .contents_bg .strategy .strategy_cont li:first-child{margin-left: 0;}
+main .contents_bg .strategy .strategy_cont li .txtbox {
+    width: 139px; height: 79px;
+    display: inline-block;
+    text-align: center;
+}
+main .contents_bg .strategy .strategy_cont li .txtbox p {
+    letter-spacing: -0.2px;
+    line-height: 23px;
+}
+main .contents_bg .strategy .strategy_cont li .txtbox p.tit {
+    font-weight: 600; /* 폰트 굴기 bold 600 */
+    line-height: 23px;
+    text-decoration-line: underline;
+    padding-bottom: 10px;
+}
+/* 마지막 박스에 제목 두줄로 하는 거 왜 안되냐고.. + 오오 집에서 하니까 됐당....*/
+main .contents_bg .strategy .strategy_cont .box5 {
+    padding-top: 39px; /* 다섯번째 원형 박스는 다른 1~4box랑 위쪽 여백이 다르니까 다시 값 주기 */
+}

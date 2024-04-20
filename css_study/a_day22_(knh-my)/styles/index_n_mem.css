@@ -1,0 +1,73 @@
+/* css 작성 시작 240418 오후 11시25분 ~ 12:32분  (소요시간 : 약 1시간 7분) */
+main {
+    width: 1024px;
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.2px;
+    margin: 50px auto;
+    padding: 50px 50px;
+    /* main 영역 보기 위한 임시 작성 속성시작 (후에 지움) */
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+main h1 {font-size: 3.125rem; /* 50px */ font-weight: 600; line-height: 1.2;}
+main .made_by {
+    background-color: beige;
+    color: #00f;
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
+/* ************** main section.buylist 표 영역 시작 ************** */
+main .buy_list {}
+main .buy_list h2{padding-top: 50px; padding-bottom: 20px;}
+main .buy_list h2,
+main .buy_list h2 .user {font-size: 1.5rem; /* 24px */ font-weight: 500;}
+main .buy_list h2 .user {color: #03c75a;}
+main .buy_list .buy_list_t {
+    width: 100%;
+    border: 3px solid #000;
+    border-left: 0; border-right: 0;
+}
+main .buy_list .buy_list_t tr * {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+main .buy_list .buy_list_t tr th,
+main .buy_list .buy_list_t tr td{
+    border: 1px solid #eee;
+    padding-left: 15px;
+}
+main .buy_list .buy_list_t tr th {
+    width: 20%; background-color: #eee;
+    font-weight: 500;
+}
+main .buy_list .buy_list_t tr td {}
+main .buy_list .buy_list_t tr td.bold {font-weight: 600;}
+/* ************** main p.detail_view 네이버페이 자세히보기 영역 시작 ************** */
+main .buy_list .detail_view,
+main .buy_list .detail_view a {
+    padding-top: 11px;
+    color: #aaa;
+}
+main .buy_list .detail_view a {text-decoration: underline;}
+/* ************** main .go_my_membership 멤버쉽보기버튼 영역 시작 ************** */
+main .btm {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding-top: 130px;
+}
+main .btm .go_my_membership {
+    padding: 20px 40px;
+    border-radius: 10px;
+    background-color: #03c75a;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+/* ************** 아직 안 배운 hover 속성 이지만 일단 해보기 ************** */
+/* ************** 아직 안 배운 hover 속성 이지만 일단 해보기 ************** */
+/* ************** 아직 안 배운 hover 속성 이지만 일단 해보기 ************** */
+main .buy_list .detail_view a:hover{color: #03c75a;}
+main .btm .go_my_membership:hover {background-color: #0f8042;}

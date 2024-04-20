@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0419(금)</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .box {
+            width: 300px; height: 200px; 
+            font-size: 10rem;
+            /* display: inline-block; text-align: center;
+            line-height: 200px; */
+        }
+        .a {background-color: aqua;}
+        .b {
+            background-color: yellow;
+            /* margin: 10px 0 60px 20px; */
+            /* margin: 20px 0; */
+            margin: 20px 0 30px;
+        }
+        .c {
+            background-color: lime;
+            /* margin: 0 0 10px 25px; */
+        }
+        .d {
+            background-color: pink;
+        }
+        .wrap {
+            background-color: skyblue; 
+            display: inline-block;
+            padding: 0 0 50px 100px;
+            /* margin: 100px 0 0 0; */
+            margin-top: 100px;
+        }
+        .wrap .e {background-color: lightgray;}
+        /* table */
+        .tt {width: 500px; background-color: aqua;}
+        .tt td, .tt th {border: 1px solid red;}
+        .tt td {padding: 20px;}
+        .tt th {padding: 20px 0;}
+        .tt{margin: 30px 0 50px 20px;}
+        /* 수열 선택자 nth-child() 연습하기 */
+        .tt thead tr th:nth-child(2) {background-color: #ff0;}
+        .tt tbody tr:nth-child(1) td:nth-child(3) {background-color: #f00;}
+        .tt tbody tr td:nth-child(1) {background-color: pink;}
+        .tt tbody tr:nth-child(1) {border-bottom: 5px solid blue;}
+    </style>
+</head>
+<body>
+    <!-- 여백 개념 margin -->
+    <!-- class를 지을 때 공백이 있으면, 다른 클래스임. 
+        ex) div class="class1 class2" ->선택자 .class1{} class2{} -->
+    <div class="box a">a</div>
+    <div class="box b">b</div>
+    <div class="box c">c</div>
+    <div class="box d">d</div>
+    <div class="wrap">
+        <div class="box e">e</div>
+    </div>
+    <hr>
+    <table class="tt">
+        <thead>
+            <tr>
+                <th>제목1</th>
+                <th>제목2</th>
+                <th>제목3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+            </tr>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
