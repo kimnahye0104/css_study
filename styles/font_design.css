@@ -1,20 +1,65 @@
 main {
+    background-color: lightgray;
     font-family: "Noto Sans KR", "맑은 고딕", sans-serif;
+    font-size: 1.0em;
 }
 /* .knh {margin-top:30px; color: green; letter-spacing: 10px;} */
 /* 선택자 */
-main .first {color: #000}
+main .first {
+    /* background-color: yellow; */
+    /* background-color: #ffff00; */
+    /* background-color: #ff0; */
+    /* background-color: rgb(255, 255, 0); */
+    background-color: rgba(255,255,0,0.6);
+}
 main .first h1 {
     font-family: "Jua", sans-serif;
+    font-size: 1.25em; /* 20px */
 }
 main .first p {
     font-family: "Nanum Pen Script", san-serif;
 }
-main .first p em {color: #000}
+main .first p em {
+    font-size: 0.8em;
+}
 main .second {color: #000}
 main .second h1 {
     font-family: "Nanum Myeongjo", serif;
 }
 main .second p {
     font-family: "Single Day", san-serif;
+}
+main .second ul {background-color: pink;}
+main .second ul li {
+    /* line-height: 1.5; */
+    line-height: 30px;
+    letter-spacing: -0.2px;
+    word-spacing: 3px;
+}
+/* line-height : 퍼센트 단위를 안써도 자동으로 인식함 = 150% = 1.5 */
+
+/* 선택자 추가 폰트 사이즈 변경 연습 */
+/* main section h1{
+    font-size: 2.188rem;
+} */
+main .first h1, main .second h1 {font-size: 2.188rem;}
+main .first p, main .second p {font-size: 1.063rem;}
+
+/* 연습 : 박스로 배경 색깔 연습 */
+.practice {
+    background-color: lightblue;
+}
+.practice h2{font-size: 1.563rem; margin: 10px 0;}
+.practice .box1 {
+    width: 100px; height: 100px;
+    background-color: #f00;
+}
+.practice .box2 {
+    width: 100px; height: 100px;
+    background-color: rgba(255,255,0,0.6);
+}
+.practice .box3 {
+    width: 100px; height: 100px;
+    background-color: rgb(0,0,255);
+    color: #fff;
 }

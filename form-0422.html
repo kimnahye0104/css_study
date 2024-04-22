@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-0422</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        /* 속성선택자(form 관련 주로 사용) */
+        /* 태그[속성] 태그에 속성이 있을 때 */
+        /* 태그[속성=값] 속성의 값이 이것일 때 */
+        /* 태그[속성^=값] 속성값이 이것으로 시작할때*/
+        /* 태그[속성$=값] 속성값이 이것으로 끝날 때*/
+        /* 태그[속성*=값] 속성값이 이것을 포함할때*/
+        #search_frm {background-color: aqua;}
+        #search_frm input[required] {background-color: yellow;}
+        #search_frm input[type=text] {background-color: lime;}
+        #search_frm input[type^=p] {background-color: pink;}
+        #search_frm input[type$=l] {background-color: blue;}
+        #search_frm input[type*=ex] {background-color: coral;}  /* [type*=ss]는 두글자 이상 쓰는 것이 좋음 */
+    </style>
+</head>
+<body>
+    <!-- 
+        form 태그란? 
+        : 입력,선택 폼을 정의하는 요소
+        예시 네이버 메인페이지 안 form이 몇개?
+        : 
+        <fieldset> : 테두리만 제거하는 식으로 사용함
+        <lengend> 테두리 사이 선에 결쳐진
+        fieldset과 legend는 html 폼양식 구분용으로 css에선 보이지 않도록 숨긴다.
+        fieldset은 border 숨기기로 legend는 요소 자체를 화면에서 숨기는식으로 처리하여,
+        디자인에 방해되지 않도록 설정한다.
+
+        input type=""
+        input name="" : 데이터를 구분할 수 있는 요소의 이름을 지정. num,
+    -->
+    <h1>form태그</h1>
+    <form action="#" method="get" id="search_frm">
+        <fieldset>
+            <legend class="skip">검색양식</legend>
+            <input type="text" name="user_id" value=""> <!-- 아이디 -->
+            <!-- 입력하는 종류="문자다" -->
+            <input type="number" name="item_count" value="1"><!-- 쇼핑 -->
+            <input type="password" name="resident_last" value=""><!-- 비밀번호 -->
+            <input type="email" name="user_mail_id" value="">
+            <input type="search" name="search_txt" value="">
+            <input type="date" name="reservation_year_month_day" value=""><!-- 호텔예약일 -->
+            <input type="time" name="reservation_pickup_time" value="15:00"><!-- 픽업시간 -->
+            <input type="url" name="portfolio_url" value=""> <!-- 포트폴리오 주소 -->
+            <!-- fieldset, legend는 html 폼 양식 구분용으로 작성한다. -->
+            <fieldset>
+                <legend class="skip">가입양식</legend>
+                <!-- 아이디, 비번, 주민등록번호, 주소 -->
+                <dl>
+                    <dt>아이디(최대 10글자 제한)</dt>
+                    <dd><input type="text" name="user_id" maxlength="10" required></dd>
+                    <!-- <dd><input type="text" name="user_id" maxlength="제한숫자" 필수입력></dd> -->
+                    <dt>비밀번호</dt>
+                    <dd><input type="password" name="user_pwd" maxlength="12" required></dd>
+                    <dt>주민등록번호</dt>
+                    <dd>
+                        <input type="text" name="regident_first" maxlength="6" required>
+                        <!-- type="number"는 maxlength로 쓸 수 없다. 오류가 난다. -->
+                        -
+                        <input type="password" name="regident_last" maxlength="7" required>
+                    </dd>
+                    <dt>주소</dt>
+                    <dd>
+                        우편번호:
+                        <input type="text" name="post_code" maxlength="5" required><br>
+                        상세주소:
+                        <input type="text" name="address_details" required><br>
+                        메일주소:
+                        <input type="email" name="user_eamil" required>
+                    </dd>
+                </dl>
+                <div class="btn_g">
+                    <button type="submit" id="join_btn">회원가입</button>
+                    <button type="reset" id="join_reset">가입취소</button>
+                </div>
+            </fieldset>
+        </fieldset>
+    </form>
+</body>
+</html>

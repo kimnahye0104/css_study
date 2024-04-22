@@ -1,109 +1,47 @@
- /* naver 공통 초록 글자  #03c75a */
-header #myname {
-    width: 1024px; height: 30px;
-    background-color: #aaa;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 30px;
-    font-size: 1.25rem;
-}
-main {
-    font-family: "Noto Sans KR", sans-serif;
-    width: 1024px; /* height: 890px; 표 table tr 추가하는 거 테스트겸 높이 지우기*/
-    margin: 20px auto;
-    padding: 46px 46px 98px 46px;
-    border: 1px solid #000;
-    /* display: inline-block;
-    text-align: center; */  
-}
-main .top {}
-main .top h1,
-main .top h1 span {
-    font-size: 3.125rem; /* 50px */
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.4px;
-}
-main .top h1 {}
-main .top h1 span {
-    color: #03c75a;
-}
-main p {
-    letter-spacing: -0.4px;
-}
-main .top h2,
-main .top h2 .user,
-main > h2 span {font-size: 1.5rem; /* 24px */}
-main .top h2 {
-    padding-top: 49px;
-    padding-bottom: 49px;
-}
-main .top h2 .user {
-    color: #03c75a;
-}
-main .top h2 .user:hover{text-decoration: underline;}
-main .top p {line-height: 34px;}
-main .top p a{text-decoration-line: underline;}
-main > h2 {
-    font-size: 1.563rem;
-    padding-top: 49px;
-    padding-bottom: 22px;
-}
-main > h2 span {color: #aaa; padding-left: 5px;}
-main .buy_list {
-    font-size: 1.25rem; /* 20px */
-    width: 933px;
-}
-main .buy_list thead,
-main .buy_list tbody {padding: 30px 0;}
-
-main .buy_list thead {
-    border-top: 3px solid #000 ;
-}
-main .buy_list thead,
-main .buy_list tbody {border-bottom: 1px solid #aaa;}
-main .buy_list thead th {}
-
-main .buy_list tbody {}
-main .buy_list tbody td {}
-
-main .buy_list tbody td em {
-    color: #03c75a;
-}
-/* 표에 높이 안주고 대신 padding 값으로 여백을 만들었다. */
-/* buy_list 는 table */
-main .buy_list tr * {padding: 15px 0;}
-main .buy_list tr .align {text-align: center;}
-main .buy_list tr .first {padding-left: 15px;}
-
-main .detail_view {
-    display: inline-block;
-    /* a태그는 inline, block 특징을 모두 가질 수 있지만, 기본적으로 고유한 속성은 inline이다. 따라서 display: inline-block을 주지 않으면, 가로세로 값, 여백 값을 인식 못한다. */
-    text-decoration: underline;
-    padding-top: 11px;
-    width: 100%;
-    text-align: right;
-}
-main .detail_view:hover {
-    color: #03c75a;
-}
-main .btm {
-    display: inline-block;
-    width: 100%;  /* 정확한 가로값은 930px */
-    text-align: center;
-    padding-top: 160px;
-}
-main .btm a {
-    background-color: #03c75a;
-    color: #fff;
-    font-size: 1.25rem; 
-    padding: 20px 40px;
-    border-radius: 30px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-}
-main .btm a:hover {
-    background-color: #0f8042;
-}
-main .btm .home {}
-main .btm .keepbox {margin-left: 15px;}
+/* css디자인 */
+/* #top {background-color: aqua;}
+#top main {background-color: yellow;}
+#top main h1 {background-color: lime;}
+#top main p {background-color: pink;} */
+.title {background-color: pink;}
+.title h1 {color: red;}
+.title .txt_wrap {background-color: blue;}
+.title .txt_wrap .txt_1 {background-color: aqua;}
+.title .txt_wrap .txt_1 .sub_title {color: red;}
+.title .txt_wrap .txt_1 .name {background-color: yellow;}
+/* 선택자 연습 2 */
+#weather {background-color: lightblue;}
+#weather h1 {color: red;}
+#weather .area {color: blue;}
+#weather .temperature {background-color: aqua; color: blue;}
+#weather p {color: red;}
+#weather .sub_title {background-color: yellow;}
+#weather .humidity {background-color: green; color: #fff;}
+#weather .dust {background-color: red; color: #fff;}
+#weather .result {color: blueviolet;}
+/* 개인 연습 practice */
+/* .practice {width: 500px;  height: 500px; background-color: yellow; border: 10px solid pink; margin: 10px 0 0;}
+.practice .box1 {width: 100px; height: 100px; background-color: lightblue;}
+.practice .box1 .blue_txt {color: blue;}
+.practice .box2 {width: 100px; height: 100px; background-color: pink; margin-left: 400px;}
+.practice .box3 {width: 100px; height: 100px; background-color: green; color: #fff; margin-left: 100px;}
+.practice .box4 {width: 100px; height: 100px; background-color: blue; color: #fff;}
+.practice .box4:hover {background-color: red; width: 200px;} */
+/*선택자 연습 3*/
+#news {margin: 30px 0 0; background-color: aqua;}
+#news > a {background-color: red;}
+#news .box {background-color: blue;}
+#news .box a {color: #fff;}
+#news .box a h2 {background-color: yellow; color: blue;}
+#news .box a p {color: red;}
+#news > p {background-color: pink;}
+/* 선택자 연습 4 */
+#papago {background-color: lightgray; margin-top: 100px;}
+#papago nav {background-color: pink;}
+#papago nav a {background-color: red;}
+#papago main {background-color: pink;}
+#papago main h1 {background-color: yellow;}
+#papago main h1 a {background-color: aqua;}
+#papago main > a {background-color: yellow;}
+#papago > a {background-color: lightgreen;} 
+/* 8줄 */
