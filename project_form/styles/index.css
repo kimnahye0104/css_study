@@ -1,0 +1,59 @@
+main {
+    font-family: "Noto Sans KR", sans-serif;
+    border: 1px solid #aaa;
+    width: 1024px;
+    margin: 0 auto;
+    padding: 0 262px;
+}
+h1 {
+    font-size: 4.375rem;
+    font-weight: 900;
+    margin-top: 84px;
+    margin-bottom: 25px;
+}
+main > p:nth-child(2) {
+    font-size: 1.25rem;
+    margin-bottom: 57px;
+}
+dt,
+h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+form input[required] {
+    width: 500px; 
+    padding: 15px 300px 15px 15px;
+    margin-bottom: 38px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+}
+h2 {margin-bottom: 32px;}
+form button {
+    width: 500px; height: 53px;
+}
+form .btn #login_btn {
+    background-color: #222;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+form .btn #login_google_btn {
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    border-radius: 10px;
+    margin-bottom: 62px;
+    border: 1px  solid #aaa;
+}
+main .join_link {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #555;
+    margin-bottom: 115px;
+}
+main .join_link a {
+    color: #000;
+}
