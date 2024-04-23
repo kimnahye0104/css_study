@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form2-spotify</title>
+    <!-- 웹글꼴 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- 디자인 -->
+    <link rel="stylesheet" href="./styles/form2.css">
+</head>
+<body>
+    <main>
+        <h1><a href="#" class="logo"><img src="./img/spotify_logo.svg" alt="Spotify"></a></h1>
+        <div class="signArea"><!-- e: signArea ----------------------- -->
+            <fieldset>
+                <input type="radio" id="sIn" name="userSignArea" value="userSignAreaIn">
+                <label for="sIn">SIGN IN</label>
+            </fieldset>
+            <fieldset>
+                <input type="radio" id="sUp" name="userSignArea" value="userSignAreaUp">
+                <label for="sUp">SIGN UP</label>
+            </fieldset>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend class="skip">로그인양식</legend>
+                    <input type="text" name="user_id" placeholder="Username" required>
+                    <input type="password" name="user_pwd" placeholder="Password" required>
+                </fieldset><!-- e: signArea  로그인 양식----------------------- -->
+                <fieldset>
+                    <legend class="skip">로그인정보저장</legend>
+                    <input type="checkbox" id="keepUserSign" name="keepUserSign">
+                    <label for="keepUserSign">stay signed in</label>
+                </fieldset><!-- e: keepUserSign ----------------------- -->
+            </form>
+        </div><!-- e: signArea ----------------------- -->
+        <div class="btn_area">
+            <button type="submit" id="join_in_btn">SIGN IN</button>
+            <a href="#" class="forget">Forget Password ?</a>
+        </div>
+    </main>
+</body>
+</html>

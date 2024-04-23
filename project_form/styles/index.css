@@ -3,7 +3,9 @@ main {
     border: 1px solid #aaa;
     width: 1024px;
     margin: 0 auto;
-    padding: 0 262px;
+    width: 1024px;
+    letter-spacing: -0.4px;
+    padding-left: 262px;
 }
 h1 {
     font-size: 4.375rem;
@@ -49,7 +51,8 @@ form .btn #login_google_btn {
 }
 main .join_link {
     display: inline-block;
-    width: 100%;
+    width: 500px;
+    margin: 0 auto;
     text-align: center;
     color: #555;
     margin-bottom: 115px;

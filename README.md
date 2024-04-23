@@ -1,4 +1,4 @@
-# CSS (Cascading Style Sheet)
+f# CSS (Cascading Style Sheet)
 ## CSS 작성 전 준비사항
 * html 문서 준비 (태그 작성 완료 상태)
 * html, css 파일 별도 폴더 관리
@@ -93,15 +93,44 @@
 * 행과 열을 병합해주는 속성
 * `colspan="Num"`: Num에 자신을 포함해 수평(행)으로 합칠 칸의 개수 적기 
 * `rowspan="Num"`: Num에 자신을 포함해 수직(열)으로 합칠 칸의 개수 적기
-## form 태그
-* action, method
-* fieldset
-### input 태그
-* `a`와 `input`의 차이점 : `input 태그`는 사용자 별로 고유한 화면(ex 로그인 접속 페이지)이나 효과가 나타나야 할 때 주로 사용한다. (`a태그`는 사용자가 모두 동일한 페이지를 보게끔 할 때 주로 사용한다.)
-* 속성 적는 법
+## form 요소와 속성'
+### `<form action="#" method=""></form>`
+* action :
+* method :
+* fieldset :
+* legend :
+## input 태그
+### `<input type="" name="">`
+* type
+* name
+* readonly
+* ㄴ ex) `value="초기화 숫자" readonly` : 읽기용이라 수정이 안된다.
+* disabled
+* ㄴ ex) `value="초기화 숫자" disabled` : 선택 자체가 활성화가 되지 않는다. (주로, 자바스크립트 동적 기능과 연결할 때 사용)
+* autofocus, autocomplete
+* value
+* placeholder
+* value와 placeholder
+* maxlength
+### input의 입력양식과 선택양식
+* text, url 등의 사용자가 직접입력가능한 입력양식
+* radio 등의 사용자의 입력이 아닌 선택으로 들어가는 선택양식
+* ex) `name` : 입력양식(데이터구분용) /  선택양식( 데이터구분,(개별데이터X, 그룹데이터구분용) )
+* `value` : 입력양식(초기값) / 선택양식(개별데이터구분용)
+### input 속성 적는 법
 * 속성선택자(form 관련 주로 사용)
-* 태그[속성] 태그에 속성이 있을 때
-* 태그[속성=값] 속성의 값이 이것일 때
-* 태그[속성^=값] 속성값이 이것으로 시작할 때
-* 태그[속성$=값] 속성값이 이것으로 끝날 때
-* 태그[속성*=값] 속성값이 이것을 포함할 때
+* `태그[속성]` : 태그에 속성이 **있을 때**
+* `태그[속성=값]` : 속성의 **값이 이것일 때**
+* `태그[속성^=값]` : 속성값이 이것으로 **시작할 때**
+* `태그[속성$=값]` : 속성값이 이것으로 **끝날 때**
+* `태그[속성*=값]` : 속성값이 **이것을 포함할 때**
+* `a`와 `input`의 차이점 : `input 태그`는 사용자 별로 고유한 화면(ex 로그인 접속 페이지)이나 효과가 나타나야 할 때 주로 사용한다. (`a태그`는 사용자가 모두 동일한 페이지를 보게끔 할 때 주로 사용한다.)
+* `autofocus` : 보통 검색기능은 "검색창"이 활성화되어 있다.
+* `autocomplete="on"` : 검색 기록이 있을때 자동으로 검색어가 뜨게 함.
+### `<textarea></textarea>`
+* `textarea` : 여러 줄의 글자가 들어가야 할 때. ex) 리뷰 쓰는 창.
+* `row=""`
+* `cols=""`
+* 사용용도 및 주의사항
+### input type="" 입력 필드 속성
+* `input type="" name="" value="..."`
