@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- 내부 디자인 시트 -->
+    <style>
+        #testFrm fieldset dl dt {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+    </style>
+    <!-- 내부 디자인 시트 -->
+</head>
+<body>
+    <h1>form</h1>
+    <form action="#" method="post" id="testFrm">
+        <fieldset class="select">
+            <legend class="skip">선택양식</legend>
+            <dl>
+                <dt>성별</dt><!-- 타입: 라디오 -->
+                <dd>선택양식 중 하나만 선택 가능, 무조건 최소 1개가 선택되어야 하는 경우</dd>
+                <dd>
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        <span>남자</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female" checked="checked"> <!-- 주사용자를 미리 설정해서  처음부터 지정되게 한다. checked="checked" -->
+                        <span>여자</span>
+                    </label>
+                    <!-- 
+                        input과 label이 형제인 경우 (for, id를 꼭 써야 한다.)
+                        input:checked_label => background-image 
+                    -->
+                    <!-- 
+                        input과 label이 부모-자식인 경우 (input 태그-자식x)
+                        label은 부모기 때문에 대상으로 불가능함.
+                        태그 추가 생성으로 구성
+                        input:checked+span => background-image
+                        (input이 체크되었을때 형제 span의 배경 이미지)
+                    -->
+                </dd>
+                <dt>관심사</dt><!-- 타입: 체크박스 -->
+                <dd>
+                    <!-- 웹기획자
+                    웹디자이너
+                    웹퍼블리셔
+                    프론트앤드개발자
+                    백앤드개발자 -->
+                    <input type="checkbox" id="web_planner" name="job" value="web_planner">
+                    <label for="web_planner">웹기획자</label>
+                    <input type="checkbox" id="web_designer" name="job" value="web_designer" checked="checked">
+                    <label for="web_designer">웹디자이너</label>
+                    <input type="checkbox" id="web_publisher" name="job" value="web_publisher">
+                    <label for="web_publisher">웹퍼블리셔</label>
+                    <input type="checkbox" id="front_developers" name="job" value="front_developers">
+                    <label for="front_developers">프론트앤드개발자</label>
+                    <input type="checkbox" id="back_developers" name="job" value="back_developers">
+                    <label for="back_developers">백앤드개발자</label>
+                </dd>
+                <dt>생일</dt>
+                <dd>
+                    <select name="month"><!-- select 인라인 태그이다. -->
+                        <option value="1">1</option>
+                        <option valueu="2">2</option>
+                        <option valueu="3">3</option>
+                        <option valueu="4">4</option>
+                        <option valueu="5">5</option>
+                        <option valueu="6">6</option>
+                        <option valueu="7">7</option>
+                        <option valueu="8">8</option>
+                        <option valueu="9">9</option>
+                        <option valueu="10">10</option>
+                        <option valueu="11">11</option>
+                        <option valueu="12">12</option>
+                    </select><span>월</span>
+                    <select name="day"> 
+                        <!-- 수열,class,id 작성 안하고 선택자 작성시
+                            = > select[name=day] + span {} -->
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select><span>월</span>
+                </dd>
+            </dl>
+        </fieldset>
+        <fieldset class="btn">
+            <legend class="skip">버튼</legend>
+            <input type="submit" value="전송,확인"> <!-- 버튼은 따로 구분하기 쉽게, button 태그를 더 많이 쓴다. -->
+            <button type="submit" id="login_btn">전송,확인</button> <!-- 각 의미적으로 하나씩 쓰이니까 id를 반드시 작성 -->
+            <button type="submit" id="join_reset_btn">취소, 삭제</button> <!-- 각 의미적으로 하나씩 쓰이니까 id를 반드시 작성 -->
+            <button type="button" id="all_around_btn">타입자체가버튼-범용특징버튼</button> <!-- 프론트,백앤드가 스크립트 기능과 함께 다양한 결과를 만들기 위해, 범용적으로 어우르는 버튼 기능을 만들 때, 만든다. ex) 네이버 모든 사람이 같은 곳으로 가면,a태그. 이지만, 무조건 같은 목적지로 가지만, 동적인 기능과 연결하고 싶을 때(약관동의 후 다음 페이지로 이동 활성화), 그 기능은 범용 버튼 button 태그로 처리하고 스크립트로 만든다.  -->
+            <hr>
+            <input type="file">
+        </fieldset>
+    </form>
+</body>
+</html>
