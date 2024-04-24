@@ -1,0 +1,141 @@
+main {
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.2px;
+    width: 1024px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+}
+main h1 {
+    margin: 41px 452px 41px;
+}
+/* 약관동의 ----------------------------------------- */
+main .law {
+    margin: 0 auto;
+    width: 612px; height: 200px;
+    overflow: auto;
+    background-color: #fff;
+    padding: 10px 10px 0;
+    margin-bottom: 54px;
+}
+main .law h2 {}
+main .law h3 {}
+main .law p {}
+/* #join_frm fielset.user_info ----------------------------------------- */
+main #join_frm {margin:auto; width: 612px;}
+main #join_frm .user_info {}
+main #join_frm .user_info dl {
+    /* background-color: red; */
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+main #join_frm .user_info dl dt {
+    /* background-color: yellow; */
+    float: left;
+    width: 156px;
+    height: 40px;
+    line-height: 40px;
+}
+main #join_frm .user_info dl dt span {
+    color: #f00;
+}
+main #join_frm .user_info dl dd:nth-child(1n) {
+    float: left;
+    margin-bottom: 10px;
+}
+main #join_frm .user_info dl dd:nth-child(1n) input[required] {
+    font-size: 0.875rem; height: 40px;
+    width: 300px;
+    border-radius: 5px;
+}
+main #join_frm .user_info dl dd:nth-child(1n) input[name*=male] {
+    height: 40px;
+}
+main #join_frm .user_info dl dd:nth-child(1n) input[name*=gender] {
+    display: none;
+    float: left;
+}
+main #join_frm .user_info dl dd:nth-child(1n) label[for*=male] {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    /* background-color: pink; */
+    overflow: hidden;
+    padding-left: 21px;
+    margin-left: 30px;
+    font-size: 0.875rem;
+}
+main #join_frm .user_info dl dd:nth-child(1n) .phone_type {
+    height: 40px;
+    font-size: 0.875rem;
+    border-radius: 5px;
+}
+main #join_frm .user_info dl dd:nth-child(1n) input[name=user_phone_num] {
+    width: 245px; height: 40px;
+    border-radius: 5px;
+}
+main #join_frm .user_info dl dd:nth-child(1n) #address_search_btn {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    border-color: #9E00B7;
+    background-color: #fff
+}
+main #join_frm .user_info dl dd:nth-child(1n) span.address {
+    color: #aaa;
+    font-size: 0.825rem;
+    display: block;
+    width: 301px;
+    height: 28px;
+    font-size: 0.875rem;
+}
+main #join_frm .user_info dl dd:nth-child(3n) {
+    display: inline-block;
+    text-align: right;
+    width: 156px; height: 40px;
+    float: right;
+    overflow: hidden;
+}
+main #join_frm .user_info dl dd:nth-child(3n) #user_id_btn,
+main #join_frm .user_info dl dd:nth-child(3n) #user_mail_btn,
+main #join_frm .user_info dl dd:nth-child(3n) #user_phone_num_btn {
+    height: 40px;
+    background-color: #9E00B7;
+    color: #fff;
+    border-radius: 5px;
+    width: 120px;
+}
+main #join_frm .user_info dl dd:nth-child(1n) input[name^=birth] {
+    display: inline-block;
+    text-align: center;
+    background-color: pink;
+    width: 40px; height: 40px;
+    margin-left: 40px;
+}
+main #join_frm .user_info dl dd:nth-child(1n) select[name^=phone] {
+    width: 50px; height: 40px;
+}
+main #join_frm .user_info dl dd:nth-child(1n) select[name^=phone] input[name^=user_p] {
+    height: 40px;
+}
+
+main #join_frm .user_info dl dd:last-child {
+    width: 0;
+}
+main #join_frm .user_info .submit_area {
+    background-color: pink;
+    display: inline-block;
+    width: 612px;
+    text-align: center;
+    margin-bottom: 55px;
+}
+main #join_frm .user_info .submit_area #join_up {
+    width: 200px;
+    height: 40px;
+    background-color: #9E00B7;
+    color: #fff;
+    font-size: 0.875rem;
+    border-radius: 10px;
+}
