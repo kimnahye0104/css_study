@@ -1,0 +1,79 @@
+main {
+    font-family: "Noto Sans KR", sans-serif; 
+    background-color: f5f5f5;
+    width: 860px;
+    border: 1px solid #aaa;
+    line-height: 24px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+main > p.top {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: -0.4px;
+    line-height: 36px;
+    color: #888;
+    margin: 60px 0;
+    padding: 0 60px 0 60px;
+}
+main > p.t_txt {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    letter-spacing: -0.4px;
+    font-weight: 700;
+    line-height: 36px;
+    color: #000;
+    margin-bottom: 10px;
+}
+/* 표 영역 시작 */
+main .t {
+    width: 745px;
+    margin-left: 56px;
+    margin-bottom: 60px;
+}
+main .t thead tr th, 
+main .t tbody tr th,
+main .t tbody tr td {
+    text-align: center;
+    font-size: 1.25rem;
+    letter-spacing: -0.2px;
+    padding: 15px 0;
+    border: 1px solid #aaa;
+}
+main .t thead {}
+main .t thead tr {}
+main .t thead tr th {
+    background-color: #00155E;
+    color: #fff;
+    width: 230px;
+    padding: 16px 0;
+}
+main .t thead tr th:nth-child(2) {width: 312px;}
+main .t tbody {}
+main .t tbody tr {}
+main .t tbody tr th {
+    font-weight: 700;
+    padding: 0;
+}
+main .t tbody tr:nth-child(1) td:nth-child(4) {
+    font-weight: 700;
+    line-height: 30px;
+    width: 200px;
+}
+/* 해당동 글자색, 가로값 */
+main .t tbody tr:nth-child(1) td:nth-child(3) {width: 207px;}
+main .t tbody tr:nth-child(1) td:nth-child(3),
+main .t tbody tr:nth-child(3) td:nth-child(3),
+main .t tbody tr:nth-child(5) td:nth-child(3),
+main .t tbody tr:nth-child(2) td:nth-child(2),
+main .t tbody tr:nth-child(4) td:nth-child(2),
+main .t tbody tr:nth-child(6) td:nth-child(2) {
+    color: #888;
+}
+/* 오전 오후 가로 값 */
+main .t tbody tr:nth-child(1) td:nth-child(2) {
+    width: 105px;
+}

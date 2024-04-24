@@ -1,0 +1,114 @@
+main {
+    font-family: "Noto Sans KR", sans-serif; 
+    border: 1px solid #aaa;
+    width: 1440px;
+    margin: 0 auto;
+    letter-spacing: -0.2px;
+    padding: 0 65px;
+}
+main h1,
+main > p:nth-child(2) {
+    font-size: 3.125rem; /* 50px */
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+main h1 {
+    font-weight: 700;
+    margin-top: 148px;
+}
+main > p:nth-child(2) {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+/* main  제목 영역 끝 */
+/* main 표 영역 시작 */
+main .t_all {margin-bottom: 136px;}
+main .t_all .t_right_top {
+    display: inline-block;
+    font-size: 1.5rem; /* 24px */
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+}
+main .t_all .t {}
+/* 표 thead tbody 공통 */
+main .t thead tr th:nth-child(1),
+main .t tbody tr th {
+    background-color: #f5f5f5;
+}
+main .t thead tr th,
+main .t tbody tr th,
+main .t tbody tr td {
+    text-align: center;
+    font-size: 1.75rem; /* 28px */
+    color: #000;
+    border: 1px solid #888;
+    letter-spacing: -0.2px;
+}
+/* --------------------------------------------- 표 table thead */
+main .t thead {}
+main .t thead tr {border-bottom: 3px solid #000;}
+main .t thead tr th {
+    padding: 30px 0;
+    font-weight: 700;
+    line-height: 34px;
+}
+main .t thead tr th:nth-child(2) {
+    padding: 15px 0;
+}
+/* --------------------------------------------- 표 table tbody */
+main .t tbody tr th {
+    width: 346px;
+    background-color: #f5f5f5;
+}
+main .t tbody tr td p.promo {
+    display: inline-block;
+    background-color: #DC0577;
+    padding: 0 7px;
+    font-size: 1.25rem;
+    color: #fff;
+    line-height: 35px;
+    border-radius: 7px;
+}
+main .t tbody tr td .price_main .price {
+    font-size: 1.875rem;
+    display: inline-block;
+}
+main .t tbody tr td .price_main .price span {
+    font-weight: 900;
+    margin-left: 8px;
+    font-size: 2.125rem;
+}
+main .t tbody tr td p.price_del {
+    margin-top: 5px;
+    color: #aaa;
+}
+
+main .t tbody tr td:nth-child(2) {
+    width: 300px;}
+main .t tbody tr td:nth-child(3),
+main .t tbody tr td:nth-child(4) {
+    width: 333px;
+}
+/* --------------------------------------------- 표 2열 전체 색깔 */
+main .t thead tr th:nth-child(2),
+main .t tbody tr td:nth-child(2) {
+    border: 7px solid #DC0577;
+    border-bottom: 2px solid #000;
+}main .t tbody tr td:nth-child(2) {
+    border-top: 0;
+}
+main .t tbody tr:nth-child(5) td:nth-child(2) {
+    border-bottom: 7px solid #DC0577;
+}
+main .t tbody tr:nth-child(1) th {
+    padding: 34px 0;
+}
+/* body 행 2~4 세로값 줄이기 */
+main .t tbody tr:nth-child(2) th,
+main .t tbody tr:nth-child(3) th,
+main .t tbody tr:nth-child(4) th,
+main .t tbody tr:nth-child(5) th {
+    padding: 30px 0;
+}
