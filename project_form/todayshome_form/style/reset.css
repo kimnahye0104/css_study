@@ -1,0 +1,24 @@
+/*html 초기화*/
+* {box-sizing: border-box;}
+body,html,
+h1,h2,h3,h4,h5,h6,fieldset,
+p,ul,ol,li,dl,dt,dd,table,tr,td,th,thead,tbody,tfoot,
+div,header,nav,aside,article,section,footer,figure,
+address,blockquote,video,iframe,hr,
+span,em,strong,q,a,sub,sup,details,figcaption,summary,
+time,s,del,code,mark,img {
+    font-size: 1.0em; font-weight: normal;
+    font-style: normal;
+    line-height: 1.0; margin: 0; padding: 0;
+}
+a {color: #000; text-decoration: none;}
+ul,ol,li {list-style: none;}
+table, tr, td, th {border-collapse: collapse;}
+th {text-align: left;}
+fieldset {border: 0;}
+.skip {display: none;}
+/* font-size 부모 따라가게 em 단위로 변경(reset 파일에서만) */
+/* 리셋 파일 원본 확인하고, table관련 초기화 태그만 다시 옮겨보기 240418 목요일 */
+/* fieldset 보더 0으로 수정 */
+/* class="name" 정하고, display: none; 하면, 이 이름의 class는 전부 화면에서 안본인다. */
+/* 리셋 수정 : 24.04.22 */

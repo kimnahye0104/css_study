@@ -1,0 +1,187 @@
+main {
+    font-family: "Noto Sans KR", sans-serif;
+    width: 360px;
+    letter-spacing: -0.2px;
+    /* font-size: 0.75rem; 12px */
+    font-weight: 300; /* demit light */
+    padding: 49px 24px;
+    border: 1px solid #000;
+    margin: 0 auto;
+}
+/* 폰트 공통 영역 --------------------------------------- */
+main h1, 
+main #join_frm .user_info .email_area dt,
+main #join_frm .user_info .pwd_area dt,
+main #join_frm .user_info .pwd_check_area dt,
+main #join_frm .user_info .nickname_area dt,
+main #join_frm .law_agree_area p {
+    font-weight: 500; /* 제목 글자 굵기-  미디엄*/
+}
+main #join_frm .user_info .pwd_area dd input,
+main #join_frm .user_info .pwd_check_area dd input,
+main #join_frm .user_info .nickname_area dd input {
+    height: 37px;
+}
+main h1 {
+    font-size: 1.25rem; /* 20px */
+    margin-bottom: 30px;
+}
+main #join_top {
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 30px;
+}
+main #join_top p {
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.625rem;
+    color: #888;
+}
+main #join_top .sns_area {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+main #join_top .sns_area a img {
+    display: inline-block;
+    width: 50px; height: 50px;
+    margin-left: 20px;
+}
+main #join_top .sns_area a:nth-child(1) img {
+    margin-left: 0;
+}
+
+
+main #join_frm {
+    width: 308px;
+}
+/* 부제목 글자 아래 여백 */
+main #join_frm .email_area dt,
+main #join_frm .pwd_area dt,
+main #join_frm .pwd_check_area dt,
+main #join_frm .nickname_area dt,
+main #join_frm .law_agree_area p {
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-size: 1rem;
+}
+/* 이메일 영역 시작 --------------------------------------- */
+main #join_frm dd input {
+    width: 308px;
+}
+main #join_frm .email_area dd input,
+main #join_frm .email_area dd dd select[name*=mail] {
+    width: 143px; height: 37px;
+}
+main #join_frm .email_area dd input[name*=mail],
+main #join_frm .email_area dd span,
+main #join_frm .email_area dd dd select[name*=mail] {
+    float: left;
+}
+main #join_frm .email_area dd select[name*=mail] {
+    /* display: none;
+    border: 1px solid #aaa; */
+    width: 143px; height: 37px;
+}
+main #join_frm .email_area dd span {
+    display: inline-block;
+    margin: 0 3px;
+    height: 37px;
+    line-height: 37px;
+}
+main #join_frm .email_area dd #user_mail_btn {
+    width: 308px; height: 43px;
+    margin-top: 10px;
+    border: 1px solid #888; color: #888;
+    background-color: #eee;
+}
+/* 이메일 영역 끝 */
+main #join_frm .pwd_area > dd:first-child {
+    margin-bottom: 15px;
+}
+
+main #join_frm .pwd_area dd span {
+    display: inline-block;
+    font-size: 0.75rem; color: #888;
+    margin-bottom: 10px;
+} 
+/* 약관동의 영역 시작 --------------------------------------- */
+main #join_frm .law_agree_area {
+    font-size: 0.75rem; color: #888;
+    margin-bottom: 30px;
+}
+main #join_frm .law_agree_area > p {
+    font-weight: 500;
+}
+main #join_frm .law_agree_area .agree_check_area {
+    border: 1px solid #aaa;
+    background-color: #eee;
+    padding: 15px;
+    /* height: 228px; */
+    width: 100%;
+}
+main #join_frm .law_agree_area .agree_check_area input[id^=agree] {display: none;}
+main #join_frm .law_agree_area .agree_check_area label[for*=agree] {
+    display: inline-block;
+    background-image: url(../img/check_off.svg);
+    background-repeat: no-repeat;
+    padding-left: 21px;
+    height: 18px;
+}
+main #join_frm .law_agree_area .agree_check_area input[id^=agree]:checked + label {
+    background-image: url(../img/check_on.svg);
+    background-repeat: no-repeat;
+    padding-left: 21px;
+}
+main #join_frm .law_agree_area .agree_check_area label:nth-child(3) {
+    padding-bottom: 15px;
+}
+/* 약관 동의 여백 */
+main #join_frm .law_agree_area .agree_check_area .all {
+    border-bottom: 1px solid #aaa;
+    height: 48px;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+main #join_frm .law_agree_area .agree_check_area ul li {
+    margin-bottom: 15px;
+}
+main #join_frm .law_agree_area .agree_check_area ul li span {
+    font-size: 0.625rem; font-weight: 300;
+    margin-left: 5px;
+}
+/* 약관동의 영역 끝 ---------------------------------------------------- */
+
+/* 섭밋 버튼 영역 시작 --------------------------------------- */
+main #join_frm .submit_btn_area {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+main #join_frm .submit_btn_area #submit_btn {
+    display: inline-block;
+    width: 308px; height: 43px;
+    background-color: #35C5F0; color: #fff;
+    border: none;
+}
+main #join_frm .submit_btn_area > p {
+    margin-top: 15px;
+    font-size: 0.625rem; color: #000;
+}
+main #join_frm .submit_btn_area > p a {
+    display: inline-block;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+/* 버튼, 박스 세부 디자인 */
+main #join_frm input, 
+main #join_frm button,
+main #join_frm .email_area dd select[name^=email] { border-radius: 5px;}
+main #join_frm button {
+    font-weight: 700;
+    border-color: #888;
+}

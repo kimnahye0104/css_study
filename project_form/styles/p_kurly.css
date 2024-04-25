@@ -1,0 +1,133 @@
+/* kurly css 재연습 */
+main {
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.2px;
+    width: 1024px;
+    background-color: lightgreen;
+}
+main h1 {
+    display: inline-block;
+    width: 1024px;
+    text-align: center;
+    margin-top: 41px;
+}
+main .law {
+    width: 612px; height: 200px;
+    overflow: auto;
+    margin: 54px 206px;
+    box-shadow: 0 0 6px #000;
+}
+/* main #join_frm {
+    margin: 0 206px;
+} */
+main #join_frm {
+    width: 612px;
+    background-color: lightgray;
+    margin-left: 206px;
+}
+/* main #join_frm .user_info {margin: 0; }
+main #join_frm .user_info dl {margin: 0; } */
+main #join_frm .user_info dl dt {
+    display: inline-block;
+    float: left;
+    background-color: aqua;
+    width:156px;
+}
+main #join_frm .user_info dl dd:nth-child(2n) {
+    display: inline-block;
+    float: left;
+    width: 300px;
+    background-color: yellow;
+}
+main #join_frm .user_info dl dd:nth-child(3n) {
+    float: right;
+    width: 156px;
+    background-color: green;
+    text-align: right;
+}
+main #join_frm .user_info dl dd:nth-child(3n) button {
+    width: 120px;
+    background-color: coral;
+}
+/* 세부 css */
+/* main #join_frm .user_info dl dd:nth-child(1n) input {
+    background-color: red;
+    width: 300px;
+    display: inline-block;
+} */
+main #join_frm .user_info dl > *:nth-child(1n) {
+    background-color: red;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+}
+main #join_frm .user_info dl:nth-child(2n) input {
+    border-radius: 10px;
+}
+main #join_frm .user_info dl:nth-child(2n) input[name^=birth] {
+    background-color: blue;
+    width: 60px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    margin: 0; 
+}
+main #join_frm .user_info dl dd:nth-child(2n) input[name*=year] {
+    margin-left: 40px;
+}
+main #join_frm .user_info dl dd:nth-child(1n) input[name=gender] {
+    display: none;
+    margin-top: 40px;
+}
+main #join_frm .user_info dl dd:nth-child(1n) label[for*=male] {
+    display: inline-block;
+    height: 40px;
+    background-image: url(../img/kurly/gender_unchecked.svg);
+    background-repeat: no-repeat;
+    padding-left: 21px;
+
+}
+main #join_frm .user_info dl dd label[for*=male] {
+    background-color: pink;
+}
+main #join_frm .user_info dl dd:nth-child(1n) input[name=gender]:checked + label {
+    background-image: url(../img/kurly/gender_checked.svg);
+    background-repeat: no-repeat;
+    padding-left: 21px;
+}
+main #join_frm .user_info dl dd:nth-child(1n) > * {
+    height: 40px;
+}
+main #join_frm .user_info dl dd input[name^=user],
+main #join_frm .user_info dl dd button[id^=address] {
+    background-color: aqua;
+    width: 300px;
+}
+main #join_frm .user_info dl dd select[name^=phone] {
+    background-color: skyblue;
+    width: 50px;
+    border-radius: 5px;
+}
+main #join_frm .user_info dl dd input[name^=user_ph] {
+    display: inline-block;
+    background-color: yellow;
+    width: 245px;
+}
+main #join_frm .user_info .submit_area {
+    margin-top: 41px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+main #join_frm .user_info .submit_area #join_up {
+    background-color: pink;
+    width: 200px;
+    height: 40px;
+}
+
+/* 주소 아래 글자 */
+main #join_frm .user_info dl dd span.address {
+    display: block;
+    background-color: yellow;
+    height: 28px;
+}

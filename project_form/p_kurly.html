@@ -11,7 +11,7 @@
     <!-- 초기화 -->
     <link rel="stylesheet" href="./styles/reset.css">
     <!-- 디자인 -->
-    <link rel="stylesheet" href="./styles/kurly_join.css">
+    <link rel="stylesheet" href="./styles/p_kurly.css">
 </head>
 <body>
     <main>
@@ -46,11 +46,11 @@
                     <dd><input type="text" name="user_id" placeholder="아이디를 입력해주세요" required></dd>
                     <dd><button type="button" id="user_id_btn">중복확인</button></dd><!-- line : 아이디 -->
                     <dt>비밀번호<span>*</span></dt>
-                    <dd><input type="password" name="user_pwd" placeholder="비밀번호를  입력해주세요" required></dd>
+                    <dd><input type="password" name="user_pwd" placeholder="비밀번호를 입력해주세요" required></dd>
                     <dd></dd><!-- e : 비밀번호 -->
                     <dt>비밀번호 확인<span>*</span></dt>
                     <dd><input type="password" name="user_pwd_btn" placeholder="비밀번호를  한번 더 입력해주세요" required></dd>
-                    <dd></dd><!-- e : 비밀번호 확인 -->
+                    <dd></dd>
                     <dt>이름<span>*</span></dt>
                     <dd><input type="text" name="user_name" placeholder="이름을 입력해주세요" required></dd>
                     <dd></dd><!-- e : 이름 -->
@@ -80,7 +80,7 @@
                     <dd>
                         <input type="radio" id="male" name="gender" value="male">
                         <label for="male">남자</label>
-                        <input type="radio" id="female" name="gender" value="female">
+                        <input type="radio" id="female" name="gender" value="female" checked="checked">
                         <label for="female">여자</label>
                         <input type="radio" id="male_none" name="gender" value="gender_none">
                         <label for="male_none">선택안함</label>
