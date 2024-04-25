@@ -1,0 +1,182 @@
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+main {
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.2px;
+    width: 1024px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+}
+main h1 {
+    margin: 41px 452px 41px;
+}
+/* 약관동의 ----------------------------------------- */
+main .law {
+    margin: 0 auto;
+    width: 612px; height: 200px;
+    overflow: auto;
+    background-color: #fff;
+    padding: 10px 10px 0;
+    margin-bottom: 54px;
+}
+main .law h2 {}
+main .law h3 {}
+main .law p {}
+/* #join_frm fielset.user_info ----------------------------------------- */
+main #join_frm {margin:auto; width: 612px;}
+main #join_frm .user_info {}
+main #join_frm .user_info dl {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+main #join_frm .user_info dl dt {
+    float: left;
+    width: 156px;
+    height: 40px;
+    line-height: 40px;
+}
+main #join_frm .user_info dl dt span {
+    color: #f00;
+}
+main #join_frm .user_info dl dd {
+    float: left;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 40px;
+}
+main #join_frm .user_info dl dd input {
+    width: 100%; height: 40px;
+}
+main #join_frm .user_info dl dd input[required] {
+    font-size: 0.875rem; height: 40px;
+    width: 300px;
+    border-radius: 5px;
+}
+main #join_frm .user_info dl dd input[name*=male] {
+    height: 40px;
+    
+}
+main #join_frm .user_info dl dd input[name*=gender] {
+    display: none;
+}
+main #join_frm .user_info dl dd label[for*=male] {
+    margin-left: 30px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.875rem;
+    background-image: url(../img/kurly/gender_unchecked.svg);
+    background-repeat: no-repeat;
+    padding-left: 21px;
+}
+main #join_frm .user_info dl dd input[id*=male]:checked + label {
+    background-image: url(../img/kurly/gender_checked.svg);
+    background-repeat: no-repeat;
+    padding-left: 21px;
+    line-height: 40px;
+    height: 40px;
+}
+
+
+main #join_frm .user_info dl dd .phone_type {
+    height: 40px;
+    font-size: 0.875rem;
+    border-radius: 5px;
+}
+main #join_frm .user_info dl dd input[name=user_phone_num] {
+    width: 245px; height: 40px;
+    border-radius: 5px;
+}
+main #join_frm .user_info dl dd #address_search_btn {
+    display: block;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    border-color: #9E00B7;
+    background-color: #fff
+}
+main #join_frm .user_info dl dd:nth-child(1n) span.address {
+    color: #aaa;
+    font-size: 0.825rem;
+    width: 301px;
+    height: 68px;
+    font-size: 0.875rem;
+}
+main #join_frm .user_info dl dd:nth-child(3n) {
+    display: inline-block;
+    text-align: right;
+    width: 156px; height: 40px;
+    float: right;
+    overflow: hidden;
+}
+main #join_frm .user_info dl dd:nth-child(3n) #user_id_btn,
+main #join_frm .user_info dl dd:nth-child(3n) #user_mail_btn,
+main #join_frm .user_info dl dd:nth-child(3n) #user_phone_num_btn {
+    height: 40px;
+    background-color: #9E00B7;
+    color: #fff;
+    border-radius: 5px;
+    width: 120px;
+    border: none;
+}
+main #join_frm .user_info dl dd input[name^=birth] {
+    display: inline-block;
+    text-align: center;
+    width: 40px; height:100%;
+    border: none;
+    background-color: #f5f5f5;
+}
+/**생년월일 dd만 별도 선택자 디자인 추가**/
+main #join_frm .user_info dl dt:last-of-type + dd {
+    border: 1px solid #9E00B7;
+    border-radius: 5px;
+    padding-left: 55px;
+}
+main #join_frm .user_info dl dd input[name=birthday_year] + span,
+main #join_frm .user_info dl dd input[name=birthday_month] + span {
+    background-color: yellow;
+    margin: 0 10px;
+}
+
+/**생년월일 dd만 별도 선택자 디자인 추가**/
+main #join_frm .user_info dl dd select[name^=phone] {
+    width: 50px; height: 40px;
+    border-radius: 5px;
+    background-image: url(../img/kurly/arrow_drop_down.svg);
+    background-repeat: no-repeat;
+    appearance: none;
+    background-position: 30px 14px;
+}
+main #join_frm .user_info dl dd select[name^=phone] input[name^=user_p] {
+    height: 40px;
+}
+
+main #join_frm .user_info dl dd:last-child {
+    width: 0;
+}
+main #join_frm .user_info .submit_area {
+    display: inline-block;
+    width: 612px;
+    text-align: center;
+    margin-bottom: 55px;
+}
+main #join_frm .user_info .submit_area #join_up {
+    width: 200px;
+    height: 40px;
+    background-color: #9E00B7;
+    color: #fff;
+    font-size: 0.875rem;
+    border-radius: 10px;
+    border: none;
+}
+/* 4/25 추가 수정 */
