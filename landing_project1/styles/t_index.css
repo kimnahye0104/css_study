@@ -1,0 +1,78 @@
+/* 북금곰 랜딩페이지 */
+main {}
+/* 배경 공통&개별값 */
+main .bg {
+    background-position: center; /* 브라우저 너비를 줄여도 곰얼굴이 가운데로 오게 하는 속성 */
+    background-repeat: no-repeat; /* 브라우저 화면 배경 사진 반복 안되게 */
+}
+main .bg1 {
+    height: 998px;
+    background-image: url(../images/bg.jpg);
+}
+/* ---------------------------------------------- 1.표지 */
+main .bg1 section {
+    width: 1250px;
+    margin: 0 auto;
+}
+main .bg1 section h1 {}
+main .bg1 section h1 a {}
+main .bg1 section h1 a img {}
+main .bg1 section h2 {
+    text-align: center;
+    font-size: 4.375rem; color: #fff;
+    letter-spacing: -0.2px; line-height: 1.2;
+    margin: 78px 0 41px; /* 로고에서 h2 글자까지 여백과 아래 버튼과의 여백 */
+}
+main .bg1 section h2 em {
+    font-weight: 700;
+}
+main .bg1 section .sponsor_link::after {
+    content: '';
+    background-image: url(../images/btn_right_arrow.svg);
+    background-repeat: no-repeat;
+    width: 32px; height: 32px; /* 가상공간은 가로세로가 필요함 */
+    display: inline-block; /* 가상공간을 블록처럼 인식하게 해야함. */
+}
+main .bg1 section .sponsor_link {
+    /* 그라디언트 : 0% FE9300, 100% FF7300 */
+    /* css에서 회전각도단위는 deg */
+    background: linear-gradient(90deg, #FE9300,#FF7300); /* (그라이던트 적용하는 법) */
+    /* ************ 그라이던트 적용을 위해 background 통합 속성을 사용했을때, 해당 요소 추가 배경이미지 꾸미기를 원한다면 가상선택자(::before,::affter)를 활용하는 것을 권장한다. *********** */
+    display: flex; margin: 0 auto; /* flex도 블록이다. */
+    justify-content: center;
+    align-items: center;
+    /* 중앙에 오게 하려면,블록,마진변경 */
+    width: 409px; /* line-height: 71px; */
+/*     text-align: center; */ height: 71px;
+    font-size: 2.125rem; font-weight: 700; color: #fff;
+    border-radius: 50px;
+}
+main .bg1 section .sponsor_question {
+    background-color: #050505; color: #fff;
+    font-size: 1.625rem;
+    width: 405px; /* text-align: center; */ height: 50px;
+    border-radius: 50px;
+    float: right; margin: 133px 0 0;
+    /* flex해보기 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 후원질문보기 버튼 : flex해보기 */
+main .bg1 section .sponsor_question::before,
+main .bg1 section .sponsor_question::after {
+    content: '';
+    background-repeat: no-repeat;
+    width: 24px; height: 24px; display: inline-block;
+}
+
+main .bg1 section .sponsor_question::before {
+    background-image: url(../images/icon_sms.svg);
+    margin-right: 8px;
+}
+main .bg1 section .sponsor_question::after {
+    background-image: url(../images/btn_right_arrow.svg);
+    background-size: 24px 24px;
+    margin-left: 5px;
+}
+/* -------------------------------------------------------- 2-퀴즈 index.css 파일에 작성 (나혼자 해보는)*/

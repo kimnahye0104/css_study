@@ -1,0 +1,70 @@
+/* 1-표지는 쌤이랑 같이 함 : 파일명 : t_index.html t_index.css */
+/* ----------------------------------------------------------------북금곰 랜딩페이지 */
+main {}
+/* 배경 공통&개별값 */
+main .bg {
+    background-position: center; /* 브라우저 너비를 줄여도 곰얼굴이 가운데로 오게 하는 속성 */
+    background-repeat: no-repeat; /* 브라우저 화면 배경 사진 반복 안되게 */
+}
+/* -------------------------------------------------------- 2-퀴즈 */
+main .bg2 {
+    height: 500px;
+    background-color: lightpink;
+    background-image: url(../images/bg_2.jpg);
+}
+/* 2-퀴즈 왼쪽 영역 : 퀴즈 리스트 */
+main .bg2 .question_area {
+    background-color: lightpink;  width: 1250px; height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: raw wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+main .bg2 .question_area .left {color: #fff;}
+main .bg2 .question_area .left h2 {
+    font-size: 3.438rem; font-weight: 500;
+    margin-bottom: 22px;
+}
+main .bg2 .question_area .left #quiz_frm {}
+main .bg2 .question_area .left #quiz_frm .quiz_list {}
+main .bg2 .question_area .left #quiz_frm .quiz_list dl {}
+main .bg2 .question_area .left #quiz_frm .quiz_list dl dt {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+main .bg2 .question_area .left #quiz_frm .quiz_list dl dd {font-size: 1.25rem; line-height: 1.7;}
+main .bg2 .question_area .left #quiz_frm .quiz_list dl dd input {
+    display: none;
+}
+main .bg2 .question_area .left #quiz_frm .quiz_list dl dd label[for*=ques] {
+    background-image: url(../images/quiz_unchecked.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    padding-left: 49px;
+}
+main .bg2 .question_area .left .quiz_btn_area {margin-top: 13px;}
+main .bg2 .question_area .left .quiz_btn_area #quiz_btn {
+    background-color: #050505; color: #fff;
+    width: 450px; height: 39px; border-radius: 50px;
+}
+/* 2-퀴즈 오른쪽 영역 : 퀴즈 리스트 */
+main .bg2 .question_area .right {}
+main .bg2 .question_area .right .num_box {margin-bottom: 28px;}
+main .bg2 .question_area .right .num_box p:nth-child(1) {
+    background-color: #FF7300; width: 529px;
+    font-size: 1.625rem; font-weight: 700; color: #fff;
+    text-align: center; line-height: 64px;
+    border-radius: 15px 15px 0 0;
+}
+main .bg2 .question_area .right .num_box p:nth-child(2) {
+    background-color: #fff;
+    text-align: center; line-height: 156px;
+}
+main .bg2 .question_area .right .num_box p:nth-child(2) em {
+    font-size: 4.375rem; letter-spacing: -0.5px; font-weight: 800;
+    color: #FF7300;
+    border-radius: 0 0 15px 15px;
+}
+main .bg2 .question_area .right .num_box p:nth-child(2) span {}
+main .bg2 .question_area .right > p {background-color: aqua; text-align: right;}
