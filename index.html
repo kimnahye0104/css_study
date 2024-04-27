@@ -2,78 +2,89 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>css 첫 수업 | 240415</title>
+    <title>WWF 북극곰 보호 캠페인</title>
+    <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <!-- css 표현대상 html -->
-    <!-- <div id="top">
-        <main>
-            <h1>title</h1>
-            <p>contents</p>
-            css는 단계별로 작성. 여러 자식 중 첫째부터 작성 -->
-            <!-- 선택자 {속성:값;} : css언어로 디자인하는 대상 ex) 태그, 클래스, 아이디 등
-        </main>
+    <main>
+            <!-- 데스크탑 가로 1920px 실제 영역 1250px -->
+    <!-- <div id="main_1">
+        <div class="area_1">
+            <a href="#"><img src="./images/logo.png" alt="wwf"></a>
+            <h1>생존의 벼랑 끝에 서 있는<br>북극곰 지켜주세요</h1>
+            <a href="#">
+                <span>북극곰 후원하기</span>
+                <img src="./images/btn_right_arrow.svg" alt="북금곰 후원하기">
+            </a>
+            <a href="#">
+                <img src="./images/icon_sms.svg" alt="말풍선">
+                <span>후원관련 자주 묻는 질문 보기</span>
+                <img src="./images/btn_right_arrow.svg" alt="">
+            </a>
+        </div>
+        <img src="./images/bg.jpg" alt="배경">
     </div> -->
-    <div class="title">
-        <h1>Contents</h1>
-        <div class="txt_wrap">
-            <div class="txt_1">
-                <p class="sub_title">티빙 Top1 프로그램</p>
-                <p class="name">스트릿 우먼 파이터</p>
+    <div class="bg bg2">
+        <div class="question_area">
+            <div class="left">
+                <h2>Quiz</h2>
+                <form action="#" method="post" id="quiz_frm">
+                    <fieldset class="quiz_list">
+                        <legend class="skip">퀴즈양식</legend>
+                        <dl>
+                            <dt>20년 사이 북극 빙하 면적은 몇 % 감소했을까요?</dt>
+                            <dd>
+                                <input type="radio" id="question_1" name="question">
+                                <label for="question_1">30%</label>
+                            </dd>
+                            <dd>
+                                <input type="radio" id="question_2" name="question">
+                                <label for="question_2">40%</label>
+                            </dd>
+                            <dd>
+                                <input type="radio" id="question_3" name="question">
+                                <label for="question_3">50%</label>
+                            </dd>
+                            <dd>
+                                <input type="radio" id="question_4" name="question">
+                                <label for="question_4">60%</label>
+                            </dd>
+                        </dl>
+                    </fieldset>
+                </form>
+                <div class="quiz_btn_area">
+                    <button type="button" id="quiz_btn">정답 확인하기</button>
+                </div>
+            </div>
+            <div class="right">
+                <div class="num_box">
+                    <p>퀴즈 참여 현황</p>
+                    <p><em>383837</em><span>명</span>참여</p>
+                </div>
+                <p>*퀴즈 참여 현황은 매주 업데이트 됩니다.</p>
             </div>
         </div>
     </div>
-    <!-- 선택자 연습 2 -->
-    <div id="weather">
-        <h1>날씨</h1>
-        <p class="area">부평구 부평동</p>
-        <p class="temperature">15.4도</p>
-        <p>어제보다 8.9도 낮음</p>
-        <h2 class="sub_title">습도</h2>
-        <p class="humidity">94%</p>
-        <h2 class="sub_title">미세먼지</h2>
-        <p class="dust">보통</p>
-        <div class="result">
-            이동 고기압의 영향을 주로 받겠으나 일시적으로 상층 찬 공기의 영향을 받을 때가 있습니다.
+    <div class="bg bg3">
+        <div class="video_area">
+            <h2>죽은 어미 곁을 떠나지 못하는<br>새끼 북극곰의 이야기</h2>
+            <div class="video_link">
+                <video></video>
+            </div>
+            <a href="#" class="sponsor_link">북극곰 후원하기</a>
         </div>
     </div>
-    <!-- <div class="practice">
-        <div class="box1">
-            <p class="blue_txt">1번 박스의 글자는 블루</p>
+    <div class="bg bg4">
+        <div class="wrap">
+            <div class="txt_area">
+                <h2>최근 20년 사이 북극의 빙하 면적은<br><em>50% 감소</em>하였습니다</h2>
+                <p>북극은 북극곰의 주 서식지이자 사냥터지만<br>이 순간에도 녹아 내리는 빙하로 인해 북극곰은 갈 곳을 잃었습니다</p>
+            </div>
+            <p><img src="./images/50_bg.jpg" alt="북극곰 사진"></p>
         </div>
-        <div class="box2">2번 박스, 2행 5열</div>
-        <div class="box3">3번 박스,3행 2열</div>
-        <div class="box4">4번 박스에 마우스 올리면 빨갛게 변하면서 박스 커짐</div>
-    </div> -->
-    <!-- 선택자 연습 3 -->
-    <div id="news">
-        <a href="#">메리츠화재</a>
-        <div class="box">
-            <a href="#">
-                <h2>펫보험 다이렉트</h2>
-                <p>월 3만원 이상 가입 시</p>
-            </a>
-        </div>
-        <p>N포인트 최대3만원<span>(2회차 납입 시)</span></p>
     </div>
-    <!-- 선택자 연습 4 -->
-    <div id="papago">
-        <nav>
-            <a href="#">웹 사이트 번역</a>
-            <a href="#">문서 번역</a>
-            <a href="#">사전</a>
-        </nav>
-        <main>
-            <h1><a href="#">한국어</a></h1>
-            <a href="#">번역하기</a>
-            <h1><a href="#">영어</a></h1>
-            <a href="#">번역하기</a>
-        </main>
-        <a href="#">네이버 사전</a>
-    </div>
+    </main>
 </body>
 </html>

@@ -1,0 +1,135 @@
+/* 1-표지는 쌤이랑 같이 함 : 파일명 : t_index.html t_index.css */
+/* ----------------------------------------------------------------북금곰 랜딩페이지 */
+main {}
+/* 배경 공통&개별값 */
+main .bg {
+    background-position: center; /* 브라우저 너비를 줄여도 곰얼굴이 가운데로 오게 하는 속성 */
+    background-repeat: no-repeat; /* 브라우저 화면 배경 사진 반복 안되게 */
+}
+/* -------------------------------------------------------- 2-퀴즈 */
+main .bg2 {
+    height: 500px;
+    background-image: url(../images/bg_2.jpg);
+    overflow: hidden;
+}
+/* 2-퀴즈 왼쪽 영역 : 퀴즈 리스트 */
+main .bg2 .question_area {
+    width: 1250px; height: 380px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: raw nowrap;
+    justify-content: space-between;
+}
+main .bg2 .question_area .left {color: #fff; margin-top: 60px;}
+main .bg2 .question_area .left h2 {
+    font-size: 3.438rem; font-weight: 500; line-height: 1.2;
+    margin-left: 221px;
+}
+main .bg2 .question_area .left #quiz_frm {margin-top: 22px;}
+main .bg2 .question_area .left #quiz_frm .quiz_list {}
+main .bg2 .question_area .left #quiz_frm .quiz_list dl {}
+main .bg2 .question_area .left #quiz_frm .quiz_list dl dt {
+    font-size: 1.25rem;
+    margin-bottom: 10px; line-height: 1.7;
+}
+main .bg2 .question_area .left #quiz_frm .quiz_list dl dd {
+    font-size: 1.25rem; line-height: 1.7;
+    margin-bottom: 16px;
+}
+main .bg2 .question_area .left #quiz_frm .quiz_list dl dd input {
+    display: none;
+}
+main .bg2 .question_area .left #quiz_frm .quiz_list dl dd label[for*=ques] {
+    background-image: url(../images/quiz_unchecked.svg);
+    background-repeat: no-repeat;
+    background-size: 27px;
+    padding-left: 49px;
+}
+/* 퀴즈 선택 효과 */
+main .bg2 .question_area .left #quiz_frm .quiz_list dl dd input[name*=ques]:checked + label {
+    background-image: url(../images/quiz_checked.svg);
+    background-repeat: no-repeat;
+    background-size: 27px;
+    padding-left: 49px;
+}
+main .bg2 .question_area .left .quiz_btn_area {}
+main .bg2 .question_area .left .quiz_btn_area #quiz_btn {
+    background-color: #050505; color: #fff;
+    width: 450px; height: 39px; border-radius: 50px;
+}
+/* 2-퀴즈 오른쪽 영역 : 퀴즈 리스트 */
+main .bg2 .question_area .right {margin-top: 114px;}
+main .bg2 .question_area .right .num_box {
+    margin-bottom: 28px; border-radius: 15px;
+    height: 220px; background-color: #fff;
+}
+main .bg2 .question_area .right .num_box p:nth-child(1) {
+    background-color: #FF7300; width: 529px;
+    font-size: 1.625rem; font-weight: 700; color: #fff;
+    text-align: center; line-height: 64px;
+    border-radius: 15px 15px 0 0;
+}
+main .bg2 .question_area .right .num_box p:nth-child(2) {
+    text-align: center; height: 156px; line-height: 156px;
+    font-size: 2.688rem; font-weight: 800;
+}
+main .bg2 .question_area .right .num_box p:nth-child(2) em {
+    font-size: 4.375rem; letter-spacing: -0.5px; font-weight: 900;
+    color: #FF7300;
+}
+main .bg2 .question_area .right .num_box p:nth-child(2) span {color: #FF7300; font-weight: 800;}
+main .bg2 .question_area .right > p {text-align: right; color: #fff;}
+/* -------------------------------------------------------- 3-동영상 */
+main .bg3 {
+    height: 1206px;
+    background-image: url(../images/bg_3.jpg);
+}
+main .bg3 .video_area {width: 900px; margin: 0 auto; padding-top: 138px;}
+main .bg3 .video_area h2 {
+    font-size: 3.438rem; line-height: 1.2;
+    font-weight: 700; text-align: center;
+}
+main .bg3 .video_area video {
+    width: 900px; height: 600px;
+    background-color: #aaa;
+    margin: 70px 0;
+}
+main .bg3 .sponsor_link {}
+main .bg3 .sponsor_link::after {
+    content: '';
+    background-image: url(../images/btn_right_arrow.svg);
+    background-repeat: no-repeat;
+    width: 32px; height: 32px; /* 가상공간은 가로세로가 필요함 */
+    display: inline-block; /* 가상공간을 블록처럼 인식하게 해야함. */
+}
+main .bg3 .sponsor_link {
+    /* 그라디언트 : 0% FE9300, 100% FF7300 */
+    /* css에서 회전각도단위는 deg */
+    background: linear-gradient(90deg, #FE9300,#FF7300); /* (그라이던트 적용하는 법) */
+    /* ************ 그라이던트 적용을 위해 background 통합 속성을 사용했을때, 해당 요소 추가 배경이미지 꾸미기를 원한다면 가상선택자(::before,::affter)를 활용하는 것을 권장한다. *********** */
+    display: flex; margin: 0 auto; /* flex도 블록이다. */
+    justify-content: center;
+    align-items: center;
+    /* 중앙에 오게 하려면,블록,마진변경 */
+    width: 409px; /* line-height: 71px; */
+/*     text-align: center; */ height: 71px;
+    font-size: 2.125rem; font-weight: 700; color: #fff;
+    border-radius: 50px;
+}
+/* -------------------------------------------------------- 4-50 */
+main .bg4 {
+    height: 1164px;
+    background-image: url(../images/bg_4.jpg);
+    background-repeat: no-repeat;
+}
+main .bg4 .wrap {width: 1250px; margin: 0 auto; padding-top: 121px;}
+main .bg4 .wrap .txt_area {
+    font-weight: 700; color: #fff; line-height: 1.2;
+}
+main .bg4 .wrap .txt_area h2 {font-size: 3.438rem; line-height: 1.2;}
+main .bg4 .wrap .txt_area h2 em {
+    display: inline-block; background-color: #fff; color: #000;
+    font-weight: 700; height: 60px;
+}
+main .bg4 .wrap .txt_area p {font-size: 2.125rem; margin-top: 66px; line-height: 1.2;}
+main .bg4 .wrap > p {width: 1250px; height: 576px; margin-top: 66px;}
