@@ -133,3 +133,54 @@ main .bg4 .wrap .txt_area h2 em {
 }
 main .bg4 .wrap .txt_area p {font-size: 2.125rem; margin-top: 66px; line-height: 1.2;}
 main .bg4 .wrap > p {width: 1250px; height: 576px; margin-top: 66px;}
+/* -------------------------------------------------------- 5-위기 */
+main .bg5 {
+    height: 1122px;
+    background-image: url(../images/bg_5.jpg);
+    background-repeat: no-repeat;
+}
+main .bg5 .wrap {
+    width: 1250px; margin: 0 auto;
+}
+main .bg5 .wrap h2 {
+    font-size: 3.438rem; font-weight: 700;
+    text-align: center; padding: 120px 0 30px;
+}
+main .bg5 .wrap > p {
+    font-size: 1.625rem; line-height: 38px;
+    text-align: center;
+}
+main .bg5 .wrap .list {
+    margin-top: 120px; height: 570px;
+    /* background-color: aqua;  */
+}
+main .bg5 .wrap .list div {
+    float: left;
+    margin-right: 44px;
+}
+main .bg5 .wrap .list div:nth-child(1),
+main .bg5 .wrap .list div:nth-child(2),
+main .bg5 .wrap .list div:nth-child(3) {
+    width: 387px; height: 100%;
+    background-color: #fff;
+    background-image: url(../images/crisis_img.jpg);
+    background-size: 387px 320px;
+    background-repeat: no-repeat;  
+}
+main .bg5 .wrap .list div:nth-child(3) {
+    margin-right: 0;
+}
+main .bg5 .wrap .list div > .tit {
+    font-size: 2.688rem; font-weight: 700; text-align: center;
+    margin-top: 45px; margin-bottom: 11px;
+}
+main .bg5 .wrap .list div > .sub {text-align: center; font-size: 1.625rem;}
+main .bg5 .wrap .list div > .btm_txt_area {
+    width: 347px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 194px;
+    padding-top: 20px; line-height: 1.7;
+    font-size: 1.25rem; color: #050505;
+}
+/* -------------------------------------------------------- 6-위기 */
