@@ -1,6 +1,6 @@
 /* 1-표지는 쌤이랑 같이 함 : 파일명 : t_index.html t_index.css */
 /* ----------------------------------------------------------------북금곰 랜딩페이지 */
-main {}
+main {font-family: "Noto Sans KR", sans-serif;}
 /* 배경 공통&개별값 */
 main .bg {
     background-position: center; /* 브라우저 너비를 줄여도 곰얼굴이 가운데로 오게 하는 속성 */
@@ -184,3 +184,37 @@ main .bg5 .wrap .list div > .btm_txt_area {
     font-size: 1.25rem; color: #050505;
 }
 /* -------------------------------------------------------- 6-위기 */
+main .bg6 {
+    height: 1164px;
+    background-image: url(../images/bg_6.jpg);
+    background-repeat: no-repeat;
+}
+main .bg6 .wrap {
+    width: 1250px;
+    height: 1164px;
+    margin: 0 auto;
+    padding-top: 121px;
+    
+}
+main .bg6 .wrap h2 {
+    margin-bottom: 66px;
+}
+main .bg6 .wrap h2,
+main .bg6 .wrap em {
+    color: #fff;
+    font-size: 3.438rem; line-height: 1.2; font-weight: 500;
+    display: inline-block;
+    padding: 0 2px;
+}
+main .bg6 .wrap em {
+    background-color: #fff; color: #050505;
+    display: inline-block;
+}
+main .bg6 .wrap p {
+    font-size: 2.125rem; color: #fff;
+    line-height: 1.2;
+    margin-bottom: 66px;
+}
+main .bg6 .wrap div {}
+main .bg6 .wrap div img {}
+/* -------------------------------------------------------- 7-wwf */
