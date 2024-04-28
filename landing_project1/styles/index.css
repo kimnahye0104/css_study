@@ -218,3 +218,56 @@ main .bg6 .wrap p {
 main .bg6 .wrap div {}
 main .bg6 .wrap div img {}
 /* -------------------------------------------------------- 7-wwf */
+main .bg7 {
+    height: 706px;
+    background-image: url(../images/bg_7.jpg);
+    background-repeat: no-repeat;
+}
+main .bg7 section {
+    margin: 0 auto;
+    height: 706px; width: 1250px;
+}
+main .bg7 section h2 {
+    font-size: 3.438rem; font-weight: 500;
+   padding: 126px 0 80px;
+   text-align: center; letter-spacing: -0.1px;
+}
+main .bg7 section p {
+    text-align: center;
+    font-size: 1.625rem; font-weight: 500;
+    line-height: 38px;
+}
+main .bg7 section p:nth-child(2) {
+    margin-bottom: 80px;
+}
+/* -------------------------------------------------------- 7-wwf */
+main .bg8 {
+    height: 1075px;
+    background-image: url(../images/bg_8.jpg);
+}
+main .bg8 section {
+    width: 1250px; height: 1075px;
+    margin: 0 auto;
+    /* display: flex;
+    flex-flow: column wrap; */
+}
+main .bg8 section h2 {
+    font-size: 3.438rem; font-weight: 500;
+   padding: 126px 0 80px;
+   text-align: center; letter-spacing: -0.1px;
+}
+main .bg8 section .img area {
+    width: 1250px; height: 509px;
+    background-color: aqua;
+}
+main .bg8 section .img area .img_left {
+    display: inline-block;
+    width: 615px;
+    height: 509px; text-align: left;
+}
+main .bg8 section .img area .img_right {
+    display: inline-block;
+    height: 509px; text-align: right;
+    margin-left: 635px;
+     color: red;
+}
