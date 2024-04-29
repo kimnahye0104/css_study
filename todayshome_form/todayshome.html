@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 | 오늘의 집</title>
+    <!-- 웹글꼴 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- 초기화 -->
+    <link rel="stylesheet" href="./style/reset.css">
+    <!-- 디자인 -->
+    <link rel="stylesheet" href="./style/todayshome.css">
+</head>
+<body>
+    <main>
+        <h1>회원가입</h1>
+        <div id="join_top">
+            <p>SNS계정으로 간편하게 회원가입</p>
+            <div class="sns_area">
+                <a href="#"><img src="./img/logo_facebook.png" alt="페이스북"></a>
+                <a href="#"><img src="./img/logo_kakao.png" alt="카카오톡"></a>
+                <a href="#"><img src="./img/logo_naver.png" alt="네이버"></a>
+            </div>
+        </div>
+        <form action="#" method="post" id="join_frm">
+            <fieldset class="user_info">
+                <legend class="skip">회원가입양식</legend>
+                <dl class="email_area">
+                    <dt>이메일</dt>
+                    <dd><input type="email" name="user_mail" placeholder="이메일"></dd>
+                    <dd><span>@</span></dd>
+                    <dd>
+                        <select name="email_choose">
+                            <option value="naver">naver.com</option>
+                            <option value="hanmil">hanmail.net</option>
+                            <option value="daum">daum.net</option>
+                            <option value="gmail">gmail.com</option>
+                        </select>
+                    </dd>
+                    <dd>
+                        <button type="button" id="user_mail_btn">이메일 인증하기</button>
+                    </dd>
+                </dl><!-- 이메일 끝 -->
+                <dl class="pwd_area">
+                    <dt>비밀번호</dt>
+                    <dd><span>영문, 숫자를 포함한 8자 이상의 비밀번호를 입력해주세요.</span></dd>
+                    <dd><input type="password" name="user_pwd" placeholder="비밀번호"></dd>
+                </dl><!-- 비밀번호 끝 -->
+                <dl class="pwd_check_area">
+                    <dt>비밀번호 확인</dt>
+                    <dd><input type="password" name="user_pwd_check" placeholder="비밀번호 확인"></dd>
+                </dl><!-- 비밀번호 확인 끝 -->
+                <dl class="nickname_area">
+                    <dt>닉네임</dt>
+                    <dd><input type="text" name="user_nickname" placeholder="별명 (2~20자)"></dd>
+                </dl><!-- 비밀번호 확인 끝 -->
+            </fieldset><!-- 이메일 ~ 닉네임 .user_info 끝 -->
+            <fieldset class="law_agree_area">
+                <legend class="skip">약관동의양식</legend>
+                <p>약관동의</p>
+                <div class="agree_check_area">
+                    <div class="all">
+                        <input type="checkbox" name="agree" id="agree_all" checked>
+                        <label for="agree_all">
+                            전체동의
+                            <span>선택항목에 대한 동의 포함</span>
+                        </label>
+                    </div>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="agree" id="agree_1">
+                            <label for="agree_1">
+                                만 14세 이상입니다<span>(필수)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="agree" id="agree_2">
+                            <label for="agree_2">
+                                이용약관<span>(필수)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="agree" id="agree_3">
+                            <label for="agree_3">
+                                개인정보수집 및 이용동의<span>(필수)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="agree" id="agree_4">
+                            <label for="agree_4">
+                                개인정보 마케팅 활용 동의<span>(선택)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="agree" id="agree_5">
+                            <label for="agree_5">
+                                이벤트, 쿠폰, 특가 알림 메일 및 SMS 등  수신<span>(선택)</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset><!-- 약관동의 끝 -->
+            <fieldset class="submit_btn_area">
+                <legend class="skip">회원가입버튼</legend>
+                <button type="submit" id="submit_btn">회원가입하기</button>
+                <p>이미 아이디가 있으신가요?<a href="#">로그인</a></p>
+            </fieldset><!-- 가입버튼 끝 -->
+        </form>
+    </main>
+</body>
+</html>
