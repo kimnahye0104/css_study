@@ -1,12 +1,94 @@
 /* 1-표지는 쌤이랑 같이 함 : 파일명 : t_index.html t_index.css */
-/* ----------------------------------------------------------------북금곰 랜딩페이지 */
-main {}
+/* 북금곰 랜딩페이지 */
+main {font-family: "Noto Sans KR", sans-serif;}
 /* 배경 공통&개별값 */
 main .bg {
     background-position: center; /* 브라우저 너비를 줄여도 곰얼굴이 가운데로 오게 하는 속성 */
     background-repeat: no-repeat; /* 브라우저 화면 배경 사진 반복 안되게 */
 }
+main .bg1 {
+    height: 998px;
+    background-image: url(../images/bg.jpg);
+}
+/* ---------------------------------------------- 1.표지 */
+main .bg1 section {
+    width: 1250px;
+    margin: 0 auto;
+}
+main .bg1 section h1 {}
+main .bg1 section h1 a {}
+main .bg1 section h1 a img {}
+main .bg1 section h2 {
+    text-align: center;
+    font-size: 4.375rem; color: #fff;
+    letter-spacing: -0.2px; line-height: 1.2;
+    margin: 78px 0 41px; /* 로고에서 h2 글자까지 여백과 아래 버튼과의 여백 */
+}
+main .bg1 section h2 em {
+    font-weight: 700;
+}
+main .bg1 section .sponsor_link::after {
+    content: '';
+    background-image: url(../images/btn_right_arrow.svg);
+    background-repeat: no-repeat;
+    width: 32px; height: 32px; /* 가상공간은 가로세로가 필요함 */
+    display: inline-block; /* 가상공간을 블록처럼 인식하게 해야함. */
+}
+main .bg1 section .sponsor_link {
+    /* 그라디언트 : 0% FE9300, 100% FF7300 */
+    /* css에서 회전각도단위는 deg */
+    background: linear-gradient(90deg, #FE9300,#FF7300); /* (그라이던트 적용하는 법) */
+    /* ************ 그라이던트 적용을 위해 background 통합 속성을 사용했을때, 해당 요소 추가 배경이미지 꾸미기를 원한다면 가상선택자(::before,::affter)를 활용하는 것을 권장한다. *********** */
+    display: flex; margin: 0 auto; /* flex도 블록이다. */
+    justify-content: center;
+    align-items: center;
+    /* 중앙에 오게 하려면,블록,마진변경 */
+    width: 409px; /* line-height: 71px; */
+/*     text-align: center; */ height: 71px;
+    font-size: 2.125rem; font-weight: 700; color: #fff;
+    border-radius: 50px;
+}
+main .bg1 section .sponsor_question {
+    background-color: #050505; color: #fff;
+    font-size: 1.625rem;
+    width: 405px; /* text-align: center; */ height: 50px;
+    border-radius: 50px;
+    float: right; margin: 133px 0 0;
+    /* flex해보기 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 후원질문보기 버튼 : flex해보기 */
+main .bg1 section .sponsor_question::before,
+main .bg1 section .sponsor_question::after {
+    content: '';
+    background-repeat: no-repeat;
+    width: 24px; height: 24px; display: inline-block;
+}
+
+main .bg1 section .sponsor_question::before {
+    background-image: url(../images/icon_sms.svg);
+    margin-right: 8px;
+}
+main .bg1 section .sponsor_question::after {
+    background-image: url(../images/btn_right_arrow.svg);
+    background-size: 24px 24px;
+    margin-left: 5px;
+}
+/* -------------------------------------------------------- 2-퀴즈 index.css 파일에 작성 (나혼자 해보는)*/
 /* -------------------------------------------------------- 2-퀴즈 */
+/* bg2 css 풀이 4.29 월 
+    main .bg > section {width:1250px; margin: 0 auto;}
+    선택자 다양하게 써보기, 자식선택자 >, 인접선택자 +, 등등.
+    퀴즈 오른쪽 왼쪽 영역은 main .bg2 section > * {모든 자식에 width: 50%; 
+    main section {display:felx;}를 주고, section > * 에 width:50px; 대신 flex: 1를 준다.
+    h2 + p 에 line-height : 1.7를 공통으로 준다 -> 두줄이 될 때를 대비.
+    ul > li 에 margin bottom을 주고, 마지막 자식 li:last-child에 margin: 0;을 줘서 초기화 시킨다.
+    li 글자가 겹치지 않게 여백 padding-left : (사진크기가로 + 글자와의 여백 ) ; 을 준다.
+    퀴즈 오른쪽 영역 -> display: flex로 하는 법 아래로 가게 flex-flow: column wrap;에
+    교차축 align-items: flex-end;
+*/
 main .bg2 {
     height: 500px;
     background-image: url(../images/bg_2.jpg);
@@ -45,7 +127,7 @@ main .bg2 .question_area .left #quiz_frm .quiz_list dl dd label[for*=ques] {
     background-size: 27px;
     padding-left: 49px;
 }
-/* 퀴즈 선택 효과 */
+/* ---------------------------------------------------------------------- 2-퀴즈 : 퀴즈 선택 효과 */
 main .bg2 .question_area .left #quiz_frm .quiz_list dl dd input[name*=ques]:checked + label {
     background-image: url(../images/quiz_checked.svg);
     background-repeat: no-repeat;
@@ -66,8 +148,16 @@ main .bg2 .question_area .right .num_box {
 main .bg2 .question_area .right .num_box p:nth-child(1) {
     background-color: #FF7300; width: 529px;
     font-size: 1.625rem; font-weight: 700; color: #fff;
-    text-align: center; line-height: 64px;
+    /* text-align: center; */ line-height: 64px;
     border-radius: 15px 15px 0 0;
+    display: flex; /* flex 넣으니, text-align보다 우선순위가 되어 좌측으로 붙어버린다. */
+    justify-content: center;
+    align-items: center;
+}
+main .bg2 .question_area .right .num_box p:nth-child(1):before {
+    background-image: url(../images/icon_person.svg);
+    content: ''; display: inline-block;
+    width: 30px; height: 30px; /* 이미지가 살짝 올라간 건, before과 text를 모두 가진 부모 p에 display:flex */
 }
 main .bg2 .question_area .right .num_box p:nth-child(2) {
     text-align: center; height: 156px; line-height: 156px;
@@ -89,7 +179,7 @@ main .bg3 .video_area h2 {
     font-size: 3.438rem; line-height: 1.2;
     font-weight: 700; text-align: center;
 }
-main .bg3 .video_area video {
+main .bg3 .video_area iframe {
     width: 900px; height: 600px;
     background-color: #aaa;
     margin: 70px 0;
@@ -133,3 +223,164 @@ main .bg4 .wrap .txt_area h2 em {
 }
 main .bg4 .wrap .txt_area p {font-size: 2.125rem; margin-top: 66px; line-height: 1.2;}
 main .bg4 .wrap > p {width: 1250px; height: 576px; margin-top: 66px;}
+/* -------------------------------------------------------- 5-위기 */
+main .bg5 {
+    height: 1122px;
+    background-image: url(../images/bg_5.jpg);
+    background-repeat: no-repeat;
+}
+main .bg5 .wrap {
+    width: 1250px; margin: 0 auto;
+}
+main .bg5 .wrap h2 {
+    font-size: 3.438rem; font-weight: 700;
+    text-align: center; padding: 120px 0 30px;
+}
+main .bg5 .wrap > p {
+    font-size: 1.625rem; line-height: 38px;
+    text-align: center;
+}
+main .bg5 .wrap .list {
+    margin-top: 120px; height: 570px;
+    /* background-color: aqua;  */
+}
+main .bg5 .wrap .list div {
+    float: left;
+    margin-right: 44px;
+}
+main .bg5 .wrap .list div:nth-child(1),
+main .bg5 .wrap .list div:nth-child(2),
+main .bg5 .wrap .list div:nth-child(3) {
+    width: 387px; height: 100%;
+    background-color: #fff;
+    background-image: url(../images/crisis_img.jpg);
+    background-size: 387px 320px;
+    background-repeat: no-repeat;  
+}
+main .bg5 .wrap .list div:nth-child(3) {
+    margin-right: 0;
+}
+main .bg5 .wrap .list div > .tit {
+    font-size: 2.688rem; font-weight: 700; text-align: center;
+    margin-top: 45px; margin-bottom: 11px;
+}
+main .bg5 .wrap .list div > .sub {text-align: center; font-size: 1.625rem;}
+main .bg5 .wrap .list div > .btm_txt_area {
+    width: 347px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 194px;
+    padding-top: 20px; line-height: 1.7;
+    font-size: 1.25rem; color: #050505;
+}
+/* -------------------------------------------------------- 6-위기 */
+main .bg6 {
+    height: 1164px;
+    background-image: url(../images/bg_6.jpg);
+    background-repeat: no-repeat;
+}
+main .bg6 .wrap {
+    width: 1250px;
+    height: 1164px;
+    margin: 0 auto;
+    padding-top: 121px;
+    
+}
+main .bg6 .wrap h2 {
+    margin-bottom: 66px;
+}
+main .bg6 .wrap h2,
+main .bg6 .wrap em {
+    color: #fff;
+    font-size: 3.438rem; line-height: 1.2; font-weight: 500;
+    display: inline-block;
+    padding: 0 2px;
+}
+main .bg6 .wrap em {
+    background-color: #fff; color: #050505;
+    display: inline-block;
+}
+main .bg6 .wrap p {
+    font-size: 2.125rem; color: #fff;
+    line-height: 1.2;
+    margin-bottom: 66px;
+}
+main .bg6 .wrap div {}
+main .bg6 .wrap div img {}
+/* -------------------------------------------------------- 7-wwf */
+main .bg7 {
+    height: 706px;
+    background-image: url(../images/bg_7.jpg);
+    background-repeat: no-repeat;
+}
+main .bg7 section {
+    margin: 0 auto;
+    height: 706px; width: 1250px;
+}
+main .bg7 section h2 {
+    font-size: 3.438rem; font-weight: 500;
+    padding: 126px 0 80px;
+    text-align: center; letter-spacing: -0.1px;
+}
+main .bg7 section p {
+    text-align: center;
+    font-size: 1.625rem; font-weight: 500;
+    line-height: 38px;
+}
+main .bg7 section p:nth-child(2) {
+    margin-bottom: 80px;
+}
+/* -------------------------------------------------------- 7-wwf */
+main .bg8 {
+    height: 1075px;
+    background-image: url(../images/bg_8.jpg);
+}
+main .bg8 section {
+    width: 1250px; height: 1075px;
+    margin: 0 auto;
+    /* display: flex;
+    flex-flow: column wrap; */
+}
+main .bg8 section h2 {
+    font-size: 3.438rem; font-weight: 500;
+    padding: 126px 0 80px;
+    text-align: center; letter-spacing: -0.1px;
+}
+main .bg8 section .img_area {
+    display: flex;
+    width: 1250px;
+    background-color: aqua;
+    position: relative;
+    z-index: 1;
+}
+main .bg8 section .img_area .img_left {
+    background-color: red;
+}
+main .bg8 section .img_area .img_right {
+    
+}
+main .bg8 section .img_area .img_right span,
+main .bg8 section .img_area .img_left span{
+    display: inline-block;
+    background-color: #2E3148;
+    width: 286px; height: 97px; color: #fff;
+    line-height: 1.5; padding-left: 25px;
+    position: absolute;
+    z-index: 2;
+}
+
+/* -------------------------------------------------------- 9-상품 */
+/* -------------------------------------------------------- 9-상품 */
+/* -------------------------------------------------------- 9-상품 */
+/* -------------------------------------------------------- 4/29 월 작성 시작 */
+main .bg9 {
+    background-image: url(../images/bg_9.jpg);
+    background-repeat: no-repeat;
+}
+main .bg9 section {width: 1250px; margin: 0 auto;}
+main .bg9 section h2 {}
+main .bg9 section .img_area {width: 1250px; ; display: flex; color: #fff;}
+main .bg9 section .img_area > * {display:inline-block;}
+main .bg9 section .img_area .img1 {}
+main .bg9 section .img_area .img2 {}
+main .bg9 section .img_area .img3 {}
