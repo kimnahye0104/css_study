@@ -546,25 +546,24 @@ main .bg12 {
     height: 391px;
     background-color: #050505;
 }
-main .bg12 div {
+main .bg12 #footer {
     width: 1250px; height: 391px;
     margin: 0 auto;
     padding: 71px 0 87px;
     color: #fff;
-    background-color: aqua;
 }
-main .bg12 div .top {
+main .bg12 #footer .top {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
-main .bg12 div .top > * {
+main .bg12 #footer .top > * {
     display: inline-block;
 }
-main .bg12 div .top p {font-weight: 700;}
-main .bg12 div .top .sns_area {}
-main .bg12 div .top .sns_area a {margin-right: 16px;}
-main .bg12 div .top .sns_area a:last-child {margin-right: 0;}
-main .bg12 div .top .sns_area a img {}
-main .bg12 div .btm {margin-top: 20px;}
-main .bg12 div .btm p {line-height: 2;}
+main .bg12 #footer .top p {font-weight: 700;}
+main .bg12 #footer .top .sns_area {}
+main .bg12 #footer .top .sns_area a {margin-right: 16px;}
+main .bg12 #footer .top .sns_area a:last-child {margin-right: 0;}
+main .bg12 #footer .top .sns_area a img {}
+main .bg12 #footer .btm {margin-top: 20px;}
+main .bg12 #footer .btm p {line-height: 2;}
