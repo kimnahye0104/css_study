@@ -1,0 +1,93 @@
+#app {
+    width: 375px; height: 812px;
+    margin: 30px auto;
+    border: 1px solid #000;
+    padding-top: 42px;
+}
+/* 상단 ------------------------------------------ */
+#app .top {
+    border: 1px solid #000;
+    padding: 0 16px; height: 56px;
+    display: flex;
+    align-items: center;
+}
+#app .top .prev {
+    width: 24px; height: 24px; background-color: gray; 
+    overflow: hidden;
+    display: inline-block;
+}
+#app .top .prev img {}
+/* 네이버 로고 ------------------------------------------ */
+#app h1 {
+    margin: 58px auto 58px;
+    width: 160px; height:42px; background-color: gray;
+    display:flex; justify-content: center; align-items: center;
+}
+#app h1 a {}
+#app h1 a img {}
+/* 공통 선택자 ------------------------------------------ */
+#app .keyboard_g {
+    width: 375px; border: 1px solid #000;
+    margin: 0 0 16px; padding: 0 16px;
+    font-size: 0.75rem;
+    display: flex; justify-content: flex-end; 
+    /* text-align: right;도 가능 */
+    /* div=container=부모 a=item=자식 */
+}
+#app .keyboard_g a {display: flex; align-items: center;}
+#app .keyboard_g a img {
+    display: inline-block; width: 16px; height: 16px;
+    background-color: gray; margin-left: 6px;
+}
+/* 아이디,비밀번호 ------------------------------------------ */
+#app #login_frm {padding: 0 16px;}
+#app #login_frm .login_g {}
+#app #login_frm .login_g ul {}
+#app #login_frm .login_g ul li {}
+#app #login_frm .login_g ul li input[name^=user] {
+    border: 1px solid gray; outline: none;
+}
+#app #login_frm .login_g ul li input[name$=id] {
+    width: 100%; height: 56px;
+    border-radius: 5px 5px 0 0;
+    padding: 0 16px 0 56px;
+    border-bottom: 0; /* <<< 비밀번호랑 boder 겹쳐서 두꺼워지는 현상 방지 속성 */
+}
+#app #login_frm .login_g ul li input[name$=pw] {
+    width: 100%; height: 56px;
+    border-radius: 0 0 5px 5px;
+    padding: 0 16px 0 56px;
+}
+/* 로그인 버튼 ------------------------------------------ */
+#app #login_frm .login_g .btn {}
+#app #login_frm .login_g .btn #login_btn {
+    padding: 16px; width: 100%;
+    border-radius: 5px;
+    background-color: gray;
+    border: 1px solid #000;
+    margin: 16px 0 0;
+}
+/* 로그인 오류시 출력 메세지 : (기본 숨김) ------------------------------------------ */
+#app #login_frm .login_g .error_message {
+    font-size: 0.75rem;
+    margin: 16px 0;
+    display: none; /* 숨기는 속성 */
+}
+/* ***찾기, 회원가입 ------------------------------------------ */
+#app .search_join {
+    margin: 35px 0 0; display: flex; justify-content: center;
+    border: 1px solid #000;
+}
+#app .search_join a {font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+#app .search_join a::after {
+    content: '';  display: inline-block;
+    width: 1px; height: 10px;
+    background-color: #000;
+    margin: 0 8px;
+}
+#app .search_join a:last-child::after {
+    display: none;
+}

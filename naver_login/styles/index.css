@@ -1,0 +1,116 @@
+#app {
+    width: 375px; height: 812px; /* 원래 높이는 쓰지 않음 */
+    border: 1px solid #000;
+    margin: 30px auto 0;
+    padding-top: 42px; /* status 공간 남기기 */
+    /* nav 하단 고정 필요 속성 */
+    position: relative;
+}
+/* ------------- 공통 레이아웃 */
+#app header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;  height: 56px;
+    border: 1px solid #000;
+}
+#app main {
+    height: 658px;
+    overflow-y: auto;
+}
+#app nav {
+    display: flex; padding: 0 16px;
+    height: 56px;
+    border: 1px solid #000;
+    /* 아직 안배운 속성 - 위치 하단 고정 */
+    position: absolute; bottom: 0; left: 0; width: 100%;
+    /* 기준을 정하다 : 부모로부터 독립; 부모의 아래서 0; 왼쪽에서 0; 가로: 부모가로 상속; */
+}
+/* ---------------- header */
+#app header a {
+    width: 24px; 
+    height: 24px; 
+    background-color: gray;
+}
+#app header .left {
+    display: flex; /* 자식a가 인라인이라 부모 left,right에 flex를 주면 박스가 보임 */
+}
+#app header .left a {margin-right: 16px;}
+#app header .left a:last-child {margin: 0;}
+#app header .left .all_nav {}
+#app header .left .pay {}
+#app header .right {
+    display: flex;
+}
+#app header .right a {margin-left: 16px;}
+#app header .right a:first-child {margin: 0;}
+#app header .right .chat {}
+#app header .right .alarm {}
+#app header .right .my_page {}
+/* ---------------- main */
+#app main  {padding-top: 125px;}
+/* ---------------- main > search form */
+
+#app main #search_frm {
+    padding: 0 16px;
+    /* search_g에 margin보단 부모에 padding 하는게 태그 적음 */
+}
+#app main #search_frm .search_g {
+    border: 1px solid #000;
+    border-radius: 171px;
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+#app main #search_frm .search_g > img[alt=logo] {
+    width: 24px; height: 24px;
+}
+#app main #search_frm .search_g > input[name^=search] {
+    border: 0;
+    outline: none; /* << 클릭시 보이는 input 기본 양식 없애는 속성 */
+}
+#app main #search_frm .search_g > #search_btn {
+    width: 24px; height: 24px;
+    overflow: hidden;
+}
+#app main #search_frm .search_g > #search_btn img {}
+/* ---------------- main > 광고,블로그,날씨 */
+#app main .adver {}
+#app main .adver1 {
+    margin: 24px 16px 168px;
+    background-color: gray; height: 16px;
+}
+#app main .adver2 {
+    background-color: gray;
+    height: 90px;
+    margin: 0 16px 19px;
+}
+#app main .weather_g {
+    display: flex;
+    margin: 0 16px 19px;
+}
+#app main .weather_g li {
+    background-color: gray;
+    flex: 1;
+    height: 66px;
+}
+#app main .weather_g li:first-child {
+    margin-right: 7.5px;
+}
+#app main .blog_g {
+    height: 140px; background-color: gray;
+    margin: 0 16px;
+}
+/* ---------------- nav */
+#app nav a {
+    border: 1px solid #aaa;
+    padding: 0 12px;
+    font-size: 0.75rem; /* 글자크기 : 12px */
+    flex:1;
+    display: flex; flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+#app nav a:first-child {margin: 0;}
+#app nav a img {}
+#app nav a span {}

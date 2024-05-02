@@ -1,0 +1,20 @@
+/* 네이버 memu css : 쌤코드 */
+
+/* header에
+{padding: 16px; display: flex; justify-content: space-between;} */
+#app_memu header > .right a {
+    width: 24px; height: 24px;
+    background-color: gray;
+    margin-right: 16px;
+}
+#app_memu header > .right a:last-child {margin: 0;}
+/* 광고 adver
+{
+    height: 85px; margin: 0 0 20px;
+    background-color: gray;
+} */
+
+/* 로그인하세요
+{
+    margin: 0 16px 12px;
+} */

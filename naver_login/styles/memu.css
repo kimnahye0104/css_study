@@ -1,0 +1,131 @@
+#app_memu {
+    width: 375px; height: 812px; /* 원래 높이는 쓰지 않음 */
+    border: 1px solid #000;
+    margin: 30px auto 0;
+    padding-top: 42px; /* status 공간 남기기 */
+}
+#app_memu header {
+    border: 1px solid #000;
+    padding: 0 16px; height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#app_memu main {
+    height: 714px;
+    /* overflow-y: auto; */
+}
+/* header ---------------- */
+#app_memu header > .left {background-color: #eee; font-size: 1.25rem; font-weight:600;}
+#app_memu header > .right {
+    display: flex;
+}
+#app_memu header > .right a {
+    width: 24px; height: 24px;
+    background-color: gray;
+    margin-right: 16px;
+}
+#app_memu header > .right a:last-child {margin: 0;}
+/* main ---------------- */
+#app_memu main > .login_g {
+    border: 1px solid #000;
+    margin: 25px 16px 16px; 
+    display: inline-block;
+}
+#app_memu main > .login_g em {font-weight: 700;}
+/* app_list */
+#app_memu main > .app_list {
+    border: 1px solid #000;
+    margin: 0 16px; 
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 130px;
+}
+#app_memu main > .app_list li {
+    width: calc(100% / 4);
+    border: 1px solid #aaa;
+}
+#app_memu main > .app_list li a {
+    display: flex; flex-flow: column wrap;
+    align-items: center;
+    /* 
+    상대값 입력 방법
+    width: calc(100% / 4); 
+    반드시 좌우 여백이 있어야
+    피그마에서 가로높이 /2 나누기하는 속성과 같은. */
+    background-color: #d9d9d9;
+}
+#app_memu main > .app_list li a img {
+    width: 42px; height: 42px;
+    display: inline-block;
+    border: 1px solid #aaa;
+}
+#app_memu main > .app_list li a span {
+    display: inline-block;
+    font-size: 0.75rem;
+}
+/* event */
+#app_memu main > .event {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    margin: 16px 0 25px;
+    padding: 10px 16px;
+}
+#app_memu main > .event img {width: 24px; height: 24px; border: 1px solid #000;}
+#app_memu main > .event span {margin-left: 4.5px; font-size: 0.75rem;}
+/* 광고 */
+#app_memu main > .adver1 {height: 70px; padding: 0 16px; background-color: gray;}
+#app_memu main > .adver2 {height: 90px; padding: 0 16px; background-color: gray;}
+/* 전체서비스-서비스검색 */
+#app_memu main > .all_serv_search_g {
+    margin: 25px 0 20px;
+    border: 1px solid #000;
+    height: 56px; padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#app_memu main > .all_serv_search_g p {font-weight: 600;}
+#app_memu main > .all_serv_search_g a {}
+#app_memu main > .all_serv_search_g a img {
+    display: inline-block;
+    width: 12px; height: 12px; overflow: hidden;
+}
+#app_memu main > .all_serv_search_g a span {
+    font-size: 0.75rem;
+}
+/* news */
+#app_memu main > .news_g {
+    border: 1px solid #000;
+    padding: 10px 16px;
+    margin: 0 0 30px;
+}
+#app_memu main > .news_g p {}
+/* 날씨 ~ 앱 */
+#app_memu main > .weather_g {
+    border: 1px solid #000;
+    margin: 0 16px; width: 343px;  height: 64px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+#app_memu main > .weather_g a {
+    background-color: gray;
+    border: 1px solid #000;
+    width: 171px; height: 24px;
+    /* 글자 가운데 오게 하는 속성 */
+    display: flex;
+    align-items: center;
+}
+#app_memu main > .weather_g a img {
+    display: inline-block;
+    width: 24px; height: 24px;
+    border: 1px solid #f00;
+}
+#app_memu main > .weather_g a span {
+    display: inline-block;
+    margin-left: 10px;
+}
+/* all_serv_search_g ---------------- */

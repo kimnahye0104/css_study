@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인-네이버</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body>
+    <div id="app">
+        <div class="top">
+            <a href="./memu.html" class="prev"><img src="#" alt="이전페이지로 이동"></a>
+        </div>
+        <h1><a href="./index.html"><img src="#" alt="naver"></a></h1>
+        <div class="keyboard_g">
+            <a href="#"><span>PC키보드보기</span><img src="#" alt=""></a>
+        </div> 
+        <form action="#" method="post" id="login_frm">
+            <fieldset class="login_g">
+                <legend class="skip">로그인양식</legend>
+                <!-- 쉽게 하려고 input으로만 태그 묶고 그러면 오류남. 블록으로 묶어줘야 함. -->
+                <!-- autofocus는 html 당 1개만 사용 가능 -->
+                <ul>
+                    <li><input type="text" name="user_id" placeholder="아이디" autofocus></li>
+                    <li><input type="password" name="user_pw" placeholder="비밀번호"></li>
+                </ul>
+                <p class="error_message">
+                    로그인이 실패하였습니다. 정보를 다시 한번 확인해주세요.
+                </p>
+                <div class="btn">
+                    <button type="submit" id="login_btn">로그인</button>
+                </div>
+            </fieldset>
+        </form>
+        <div class="search_join">
+            <a href="#">비밀번호 찾기</a>
+            <a href="#">아이디 찾기</a>
+            <a href="#">회원가입</a>
+        </div>
+    </div>
+</body>
+</html>
