@@ -1,0 +1,85 @@
+/* body top 버튼 */
+body {position: relative;}
+.top_btn .btn {
+    position: absolute;
+    text-align: center;
+    width: 80px; height: 80px; color: #fff;
+    background-color: #444;
+    display: inline-block;
+    padding-top: 5px;
+    right: 50px; bottom: 80px;
+}
+/* main 영역 */
+main {font-family: "Noto Sans KR", sans-serif;}
+/* 배경 공통&개별값 */
+main .bg {
+    background-position: center; /* 브라우저 너비를 줄여도 이미지 가운데로 오게 하는 속성 */
+    background-repeat: no-repeat; /* 브라우저 화면 배경 사진 반복 안되게 */
+    background-size: cover;
+}
+main .bg1 {
+    background-image: url(../images/bg_1.jpg);
+    height: 1000px;
+}
+main .bg1 #area_1 {
+    width: 1250px;
+    margin: 0 auto;
+    text-align: center;
+}
+main .bg1 #area_1 h1 {padding: 134px 0 50px;}
+main .bg1 #area_1 p {
+    font-size: 2.688rem; font-weight: 500;
+    color: #fff; line-height: 1.2;
+}
+main .bg1 #area_1 .img_area {
+    width: 1215px;
+    margin-top: 90px;
+}
+main .bg1 #area_1 .img_area img {}
+/* ------------------------------------------------------ 2 */
+main .bg2 {
+    height: 1000px;
+    background-image: url(../images/bg_2.jpg);
+    background-repeat: no-repeat;
+}
+/* ------------------------------------------------------ 3 */
+main .bg3 {
+    height: 1000px;
+    background-image: url(../images/bg_3.jpg);
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+/* ------------------------------------------------------ 4-티빙 오리지널 */
+main .bg4 {
+    height: 1000px;
+    background-image: url(../images/bg_4.jpg);
+    background-repeat: no-repeat;
+}
+main .bg4 section {
+    width: 1250px; margin: 0 auto;
+    text-align: center; color: #fff;
+}
+main .bg4 section h2 {
+    font-size: 2.688rem; font-weight: 500; line-height: 1.2;
+    padding: 257px 0 60px;
+    display: flex; justify-content: center;
+}
+main .bg4 section h2 img {
+    margin: 0 5px;
+}
+main .bg4 section .img_area {}
+main .bg4 section .img_area a {margin-right: 25px;}
+main .bg4 section .img_area a:last-child {margin-right: 0;}
+main .bg4 section .img_area a img {
+    width: 198px; height: 284px; border-radius: 15px;
+}
+main .bg4 section .img_area a img:hover {
+    scale: 1.2;
+}
+main .bg4 section p {
+    font-size: 1.625rem; margin: 60px 0 0;
+}
