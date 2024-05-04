@@ -391,7 +391,16 @@ main .bg7 section p {
 main .bg7 section p:nth-child(2) {
     margin-bottom: 80px;
 }
-/* -------------------------------------------------------- 7-wwf */
+/* -------------------------------------------------------- 8-활동 */
+/* left,right를 div 말고 다양한 태그 활동해서 ul li, dl 태그를 써보기 */
+/* left(ul) > left top img (li) > dl > dt,dd *
+/* flex는 형제끼리 크기를 맞춰 주는 성질이 있음 *************************  */
+/* 
+    left {flex:1} 
+    .container > * {
+        width: calc((100% - 40px) / 2); <<<< 전체에서 여백 40 빼고 나누기 2
+    }
+*/
 main .bg8 {
     height: 1075px;
     background-image: url(../images/bg_8.jpg);
@@ -440,7 +449,7 @@ main .bg8 section .img_area .img_right .img3 {
 main .bg8 section .img_area .img_right p,
 main .bg8 section .img_area .img_left p {
     display: inline-block;
-    background-color: #2E3148;
+    background-color: rgba(46,49,72,0.8);
     width: 286px; height: 97px; color: #fff;
     line-height: 1.5; padding: 10px 0 0 25px;
 }
@@ -450,6 +459,21 @@ main .bg8 section .img_area .img_left p em {
 }
 main .bg8 section .img_area .img_left p {margin-top: 133px;}
 main .bg8 section .img_area .img_right p {margin-top: 397px;}
+/* margin 대신 position 으로 위치 조정하는 법 240503 (금) */
+/*
+    부모 dl에 position: absolute; - absolute 설정 요소는 블록 요소여도 inline-block처럼 내용 크기만큼 인식한다.
+    .left li, .right (dl의 부모)에 position: relative;
+    position 줬으니, right,left,top,bottom 속성 넣기.
+    -----------------------------------------------------
+    position
+    태그 위치와 관계 없이 오직 "부모"를 기준으로 위치를 새로 잡는다.
+*/
+/*
+    블록 요소에 absolute를 넣으면, 너비 값이 없을 때..
+    absolute 설정 요소의 기본 너비 100%를 유지하고 싶다면
+    absolute는 inline-block처럼 너비르 ㄹ내용만큼만 인식하니까
+    반드시 width: 100%를 추가로 입력해서 적용해야 한다!!!!!!!!!!!!!
+*/
 /* -------------------------------------------------------- 9-상품 */
 /* -------------------------------------------------------- 9-상품 */
 /* -------------------------------------------------------- 9-상품 */
@@ -544,7 +568,8 @@ main .bg11 .txt_area p span {
 /* -------------------------------------------------------- 12-footer */
 main .bg12 {
     height: 391px;
-    background-color: #050505;
+    background-image: url(../images/bg_12.jpg);
+    background-repeat: no-repeat;
 }
 main .bg12 #footer {
     width: 1250px; height: 391px;
