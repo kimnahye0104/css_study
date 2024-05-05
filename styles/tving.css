@@ -1,13 +1,13 @@
 /* body top 버튼 */
-body {position: relative;}
-.top_btn .btn {
-    position: absolute;
+body {}
+#top_btn .btn {
+    position: fixed;
     text-align: center;
     width: 80px; height: 80px; color: #fff;
     background-color: #444;
     display: inline-block;
     padding-top: 5px;
-    right: 50px; bottom: 80px;
+    right: 30px; bottom: 40px;
 }
 /* main 영역 */
 main {font-family: "Noto Sans KR", sans-serif;}
@@ -91,24 +91,48 @@ main .bg2 section .right .go_watching {
     width: 434px;
     padding: 15px 20px; border-radius: 10px;
     margin: 200px 0 50px;
+    opacity: 60%;
 }
 main .bg2 section .right .go_quiz {
     display: inline-block;
     background-color: #fff;
     width: 361px;
     padding: 15px 20px; border-radius: 10px;
+    opacity: 60%;
 }
+main .bg2 section .right .go_watching:hover {opacity: 100%;}
+main .bg2 section .right .go_quiz:hover {opacity: 100%;}
 /* ------------------------------------------------------ 3 */
 main .bg3 {
     height: 1000px;
     background-image: url(../images/bg_3.jpg);
     background-repeat: no-repeat;
 }
-
-
-
-
-
+main .bg3 div {
+    width: 1250px; margin: 0 auto;
+    text-align: center;
+}
+main .bg3 div p:first-child,
+main .bg3 div .tit {
+    font-weight: 700;
+    color: #FF143C; 
+}
+main .bg3 div p:first-child {
+    padding: 125px 0 15px; font-size: 1.625rem;
+}
+main .bg3 div .tit {font-size: 3.438rem;}
+main .bg3 div .video_area {
+    margin: 62px 0;
+}
+main .bg3 div .video_area iframe {}
+main .bg3 div .go_watching {
+    background-color: #000; color: #fff;
+    padding: 20px 30px; border-radius: 10px;
+    font-size: 1.625rem;
+}
+main .bg3 div .go_watching:hover {
+    color: #FF143C;
+}
 /* ------------------------------------------------------ 4-티빙 오리지널 */
 main .bg4 {
     height: 1000px;
@@ -139,3 +163,221 @@ main .bg4 section .img_area a img:hover {
 main .bg4 section p {
     font-size: 1.625rem; margin: 60px 0 0;
 }
+/* ------------------------------------------------------ 5-사용자맞춤서비스 */
+main .bg5 {
+    height: 1000px;
+    background-image: url(../images/bg_5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main .bg5 .bg5_section {
+    width: 1250px; margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+main .bg5 .bg5_section .sub_tit {
+    padding: 149px 0 20px;
+    font-size: 2.125rem;
+}
+main .bg5 .bg5_section .tit {font-size: 4.375rem; margin-bottom: 100px;}
+main .bg5 .bg5_section .week_contents {}
+main .bg5 .bg5_section .week_contents p {padding: 0 0 70px; font-size: 2.125rem;}
+main .bg5 .bg5_section .week_contents a {
+    display: inline-block;
+    width: 198px; height: 284px; border-radius: 15px;
+    background-color: gray;
+    margin-right: 60px;
+}
+main .bg5 .bg5_section .week_contents a:last-child {
+    margin: 0;
+}
+/* ------------------------------------------------------ 6-사용자 최적화 ui 제공 */
+main .bg6 {
+    height: 1000px;
+    background-image: url(../images/bg_6.jpg);
+    background-repeat: no-repeat;
+}
+main .bg6 .bg6_section {
+    width: 1250px;
+    margin: 0 auto; color: #fff;
+    text-align: center;
+    padding: 153px 0 0;
+}
+main .bg6 .bg6_section .sub_tit {
+    font-size: 2.125rem;
+}
+main .bg6 .bg6_section .tit {
+    font-size: 4.375em; font-weight: 700;
+    margin: 20px 0 0;
+}
+main .bg6 .bg6_section .img_area {
+    padding: 70px 0 0;
+}
+/* ------------------------------------------------------ 7-만족도 높은 플랫폼 */
+main .bg7 {
+    height: 1000px;
+    background-image: url(../images/bg_7.jpg);
+    background-repeat: no-repeat;
+}
+main .bg7 .bg7_section {
+    width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    padding: 123px 0 0;
+    border-top: 1px solid #f00;
+}
+main .bg7 .bg7_section .txt_area {
+    text-align: center; color: #fff;
+}
+main .bg7 .bg7_section .txt_area .sub_tit {
+    font-size: 2.125rem;
+}
+main .bg7 .bg7_section .txt_area .tit {
+    font-size: 4.375em; font-weight: 700;
+    margin: 20px 0 0;
+}
+main .bg7 .bg7_section .img_area {
+    margin-top: 213px;
+}
+/* ------------------------------------------------------ 8-트렌드 선도하는 티빙 */
+main .bg8 {
+    height: 1000px;
+    background-image: url(../images/bg_8.jpg);
+}
+main .bg8 .bg8_section {
+    width: 1250px; margin: 0 auto; color: #fff;
+    text-align: center;
+}
+main .bg8 .bg8_section .tit {font-size: 4.375em; font-weight: 700; padding: 180px 0 50px;}
+main .bg8 .bg8_section .video_area {
+    width: 812px; height: 457px;
+    background-color: gray;
+    margin: 0 auto;
+}
+main .bg8 .bg8_section .btm {
+    margin: 50px auto 0;
+    background-color: #FF143C;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    width: 646px; height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .bg8 .bg8_section .btm em {}
+main .bg8 .bg8_section .btm span {display: flex; line-height: 35px;}
+main .bg8 .bg8_section .btm span::before {
+    content: '';
+    background-image: url(../images/bg8_btm_bar.jpg);
+    width: 3px; height: 35px;
+    display: inline-block;
+    margin: 0 20px;
+}
+/* ------------------------------------------------------ 9-국내 최고의 엔터테이먼트 */
+main .bg9 {
+    height: 1000px;
+    background-image: url(../images/bg_9.jpg);
+}
+main .bg9 .bg9_section {
+    width: 1250px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: right;
+    padding: 345px 0 0;
+}
+main .bg9 .bg9_section .tit {
+    font-size: 4.375em; font-weight: 700;
+}
+main .bg9 .bg9_section .sub_tit {font-size: 2.125rem;  margin: 30px 0 0}
+/* ------------------------------------------------------ 10-sns */
+main .bg10 {
+    height: 1000px;
+    background-image: url(../images/bg_10.jpg);
+    background-repeat: no-repeat;
+}
+/* ------------------------------------------------------ 11-지금 구독하세요 */
+main .bg11 {
+    height: 1000px;
+    background-image: url(../images/bg_11.jpg);
+    background-repeat: no-repeat;
+}
+main .bg11 .bg11_section {
+    width: 1250px; margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+main .bg11 .bg11_section .top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 282px 0 0;
+}
+main .bg11 .bg11_section .top p {font-size: 3.438rem; font-weight: 700;}
+main .bg11 .bg11_section .top h2 {padding: 0 30px;}
+main .bg11 .bg11_section p:nth-child(2) {
+    margin: 60px 0 200px;
+    font-size: 2.688rem; font-weight: 500;
+}
+main .bg11 .bg11_section a {
+    background-color: #000; color: #fff;
+    padding: 25px 40px;
+    border-radius: 29px;
+    font-size: 3.438rem; font-weight: 700;
+}
+/* ------------------------------------------------------ 12-footer */
+main .bg12 {
+    background-color: #000;
+    height: 460px;
+}
+main .bg12 .bg12_section {
+    width: 1250px;
+    margin: 0 auto;
+    padding: 91px 0 91px 30px;
+    color: #fff;
+}
+main .bg12 .bg12_section .top {margin-bottom: 80px;}
+main .bg12 .bg12_section .top a {
+    color: #fff;
+}
+main .bg12 .bg12_section .top a::after {
+    content: '';
+    width: 1px; height: 14px;
+    display: inline-block;
+    background-color: #fff;
+    margin: 0 20px;
+}
+main .bg12 .bg12_section .top a:last-child::after {
+    display: none;
+}
+main .bg12 .bg12_section .top a:last-child em {
+    text-decoration: underline;
+}
+main .bg12 .bg12_section .btm_top {
+    margin-bottom: 20px;
+    display: flex;
+}
+main .bg12 .bg12_section .btm_top li::after {
+    content: '';
+    width: 1px; height: 14px;
+    display: inline-block;
+    background-color: #fff;
+    margin: 0 20px;
+}
+main .bg12 .bg12_section .btm_top li:last-child::after{display: none;}
+main .bg12 .bg12_section .btm_btm {
+    display: flex;
+}
+main .bg12 .bg12_section .btm_btm li:first-child::after {
+    content: '';
+    width: 1px; height: 14px;
+    display: inline-block;
+    background-color: #fff;
+    margin: 0 20px;
+}
+main .bg12 .bg12_section em {font-weight: 700;}
+main .bg12 .bg12_section .btm_btm {margin-bottom: 80px;}
+main .bg12 .bg12_section .sns {}
+main .bg12 .bg12_section .sns a {margin-left: 30px;}
+main .bg12 .bg12_section .sns a:first-child {margin-left: 0;}
