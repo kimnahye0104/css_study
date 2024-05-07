@@ -136,6 +136,8 @@ f# CSS (Cascading Style Sheet)
 * `input type="" name="" value="..."`
 ## float
 **블록 요소의 흐름(flow)을 변경하기 위해 사용하는 레이아웃 배치 속성**
+*  `float: left,right;` : 형제 관계에 해당하는 block or inline 태그 왼쪽, 오른쪽 정렬할 때 사용
+* 예 : ul-li 3개 정렬 ul li {float:left;}
 * 장점 : 오래 사용해서 호환성이 좋다
 * 단점 1 : center는 할 수 없고, left와 right만 가능하다.
 * 단점 2 : float적용시, `width` 값을 인식 못하는 경우 발생.
@@ -148,3 +150,77 @@ f# CSS (Cascading Style Sheet)
 * 1) 부모 스스로 값을 가지게 함. 해결법 1. 크기를 직접 적용한다. (비추천)
 * 2) 가상 요소를 만들어준다. 2. 자식포함 크기 재인식 속성
 * 3) 해결법 3. 가상 공간 설정 (추천) `선택자(float준자식의 부모)::after`
+## flex
+**정렬하고자 하는 아이템의 부모한테 flex를 먼저 설정한다.**
+* 예 : ul-li 3개 정렬 `ul {display:flex}` (->보통 부모에 입력하지만(시작) 상황에 따라 자식에도 flex를 준다.)
+* flex 설정시 **기본 값** : 메인축(수평) 교차축(수직)
+* `display:flex` : 정렬대상의 부모 설정 속상값, 설정 시 해당 부모기준 자식까지 (자손x) flexible box layout 으로 처리하겠다.
+### 메인축 기준 flex 속성
+* `flex-direction` : 부모에 적용/ 자식 item 방향을 설정
+* row (row-reverse) : 수평축 (왼쪽 -> 오른쪽)
+* cloumn (cloum-reverse) : 수직축
+* `flex-wrap`
+* wrap : 줄바꿈처리 가능
+* nowrap : 줄바꿈 x 자식의 가로(%)가 웹너비에 맞게 줄어든다 
+* `flex-flow`
+* row(수평축), cloum(수직축)
+* `justify-content` (메인축 정렬 속성) : item을 메인축 기준으로..
+* `justify-content: flex-start;` : 부모의 시작점으로 정렬
+* `justify-content: flex-end;` : 부모의 끝점으로 정렬
+* `justify-content: center;` : 중앙정렬 정렬 (이때 flex-flow: ; 값 중요 row,colum에 따라 다름)
+* `space-between` 과 `space-around` : 부모 시작,끝점 여백 x 자식 중앙정렬
+* `space-between` 과 `space-between` : 부모 시작,끝점 여백 0 자식 중앙정렬
+* -
+* `align-content` 부모에 적용 : (교차축 정렬 속성) : item을 교차축 기준으로..
+* `align-items` 부모에 적용 : (교차축 정렬 속성) : item을 교차축 자식(아이템)이 1줄일때만!
+* `align-self` 자식에 적용 : align-item보다 우선순위 높음 (flex-end, flex-start)
+* `order:숫자;` 자식에 적용 : 자식의 정렬 순서 변경 a,b,c에 각 3,1,2을 주면 ab 
+* `flex-grow` 자식에 적용 : 부모의 너비에서 자식의 비율(너비)을 뜻한다.
+## position
+* 기준을 잡는 속성 : `relative, absolute, fixed`
+* 위치를 잡는 속성 :  `left, right, top, bottom`
+### relatvie;
+* **'나'**를 기준으로
+### absolute
+* 가장 가까운 **'부모'**를 기준으로 새롭게 위치를 설정한다.
+## Font Awesome
+### html 로 하는 방법
+* 1. font awesome icon 사이트에서 html -  `i` 태그를 복사해서 html에 붙여넣기 한다.
+* 2. css 선택자를 작성한다.
+### css 로 하는 방법
+* 1. font-awesome cdm link 태그로 준비한다.
+* 2. awesome 전용의 font-family와 font-weight를 설정한다.
+* 3. awesome 적용될 태그를 준비한다. 꼭 a,button일 필요는 없음.
+* 4. 준비한 3번 태그에 가상 선택자(after, before)를 작성한다.
+* 5. 가상선택자에 content 속성을 입력해서 Unicode를 삽입한다.
+* **실제로는 css로 font-awesome 하는 법으로 더 많이 쓴다.**
+## 반응형 웹이란?
+**사용자가 이용하는 화면 크기에 따라 자동으로 페이지가 재배열되는 레이아웃 유형**
+* html 요소의 순서를 잘못 구성했을 경우 반응형 구성이 어려움
+* 불필요한 크기는 최대한 쓰지 않도록 한다.
+## 반응형 제작 준비
+### 1-각 디바이스 해상도 이해하기
+1) 320 mobile : 320-최솟제한값 (iphone5 ver)
+2) 480
+3) 760 tablet
+4) 960
+5) 1200 desktop
+6) 1600
+### 2-viewport 뷰포트 이해하기
+* 화면에서 보이는 비율을 제대로 이해하고 있기 (meta viewport, vh, vw 등등)
+### 3-Device BreakPoint px 설정
+* Media Queries
+* 각 디바이스 해상도에 따라 앱의 스타일(css) 변경 시 사용 (*블로그 참고)
+ex) 다크모드 상태에서 프린트할 때 : `@media print {body,html{background:white}}` : 잉크(블랙) 낭비를 줄이기 위해, 배경색이 흰색으로 나오게 설정함.
+### 4-최소/최대 너비 설정
+* `min-width` 규칙 : **작은 값 -> 큰 값** 순서로 작성 (요즘엔 모바일 유저가 많아서 모바일 설계 먼저하는 경우도 많음)
+* `max-width` 규칙 : **큰 값 -> 작은 값** 순서로 작성
+* `min`, `max` width는 @media 없이도 자주 쓰는 기능(css속성)이다.
+* `min`, `max` width는 px 단위(권장)이다.
+### 5-
+* 
+## 적응형 웹이란?
+**사용자가 이용하는 디바이스에 맞춰 별도로 생성된 레이아웃을 불러오는 유형**
+* 장점 : 원하는 기기와 플랫폼에 맞는 최적화된 크기를 제공
+* 단점 : 새로 나온 기기에 대응할 수 있는 능력이 부족하다.
+* 보통은 반응형으로 만든다.
