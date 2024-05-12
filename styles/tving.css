@@ -2,12 +2,14 @@
 body {}
 #top_btn .btn {
     position: fixed;
+    z-index: 999;
     text-align: center;
     width: 80px; height: 80px; color: #fff;
     background-color: #444;
     display: inline-block;
     padding-top: 5px;
     right: 30px; bottom: 40px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }
 /* main 영역 */
 main {font-family: "Noto Sans KR", sans-serif;}
@@ -41,7 +43,8 @@ main .bg2 {
     height: 1000px;
     background-image: url(../images/bg_2.jpg);
     background-repeat: no-repeat;
-    border-bottom: 1px solid red;
+    position: relative;
+    z-index: 1;
 }
 main .bg2 section {
     width: 1250px;
@@ -92,6 +95,8 @@ main .bg2 section .right .go_watching {
     padding: 15px 20px; border-radius: 10px;
     margin: 200px 0 50px;
     opacity: 60%;
+    display: flex;
+    justify-content: center; align-items: center;
 }
 main .bg2 section .right .go_quiz {
     display: inline-block;
@@ -99,9 +104,91 @@ main .bg2 section .right .go_quiz {
     width: 361px;
     padding: 15px 20px; border-radius: 10px;
     opacity: 60%;
+    display: flex;
+    justify-content: center; align-items: center;
+}
+main .bg2 section .right .go_watching::after {
+    content: ''; display: inline-block;
+    width: 34px; height: 34px;
+    background-image: url(../images/bg2_yumi_arrow.png);
+    background-repeat: no-repeat;
+}
+main .bg2 section .right .go_quiz::after {
+    content: ''; display: inline-block;
+    width: 34px; height: 34px;
+    background-image: url(../images/bg2_quiz_arrow.png);
+    background-repeat: no-repeat;
 }
 main .bg2 section .right .go_watching:hover {opacity: 100%;}
 main .bg2 section .right .go_quiz:hover {opacity: 100%;}
+/* ------------------------------------------------------ 2-퀴즈 팝업 (기본 숨기기) */
+main .bg2 #quiz_popup {
+    color: #fff;
+    position: relative;
+    z-index: 100;
+    bottom: 776px;
+    margin: 0 auto;
+    /* 팝업 none 처리 ------------------ */
+    display: none;
+}
+main .bg2 #quiz_popup .quiz_box {
+    background-color: #FF143C;
+    width: 910px; height: 600px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+main .bg2 #quiz_popup .quiz_box > * {
+    display: flex;
+    justify-content: center;
+}
+main .bg2 #quiz_popup .quiz_box p:first-child {}
+main .bg2 #quiz_popup .quiz_box p:first-child img {
+    padding: 15px 15px 0 860px;
+}
+main .bg2 #quiz_popup .quiz_box .question {
+    font-size: 1.75rem;
+    padding: 38px 0 20px;
+}
+main .bg2 #quiz_popup .quiz_box .quiz_btmline {
+    width: 879px; height: 3px;
+    background-color: #fff;
+    margin: 0 auto 13px;
+}
+main .bg2 #quiz_popup .quiz_box .question_sub_info {}
+main .bg2 #quiz_popup .quiz_box .quiz_area {margin-top: 69px;}
+main .bg2 #quiz_popup .quiz_box .quiz_area li {text-align: center;}
+main .bg2 #quiz_popup .quiz_box .quiz_area li input[id*=yumi] {
+    display: none;
+}
+main .bg2 #quiz_popup .quiz_box .quiz_area li label[for*=yumi] {
+    font-size: 1.625rem;
+    background-image: url(../images/quiz_unchecked.png);
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+main .bg2 #quiz_popup .quiz_box .quiz_area li input[id*=yumi]:checked + label {
+    background-image: url(../images/quiz_checked.png);
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    color: #000; font-weight: 700;
+}
+main .bg2 #quiz_popup .quiz_box .quiz_area li img {
+    margin-top: 30px;
+    background-color: #d9d9d9; width: 189px; height: 189px;
+    border-radius: 15px; display: inline-block;
+}
+main .bg2 #quiz_popup .quiz_box #quiz_btn {
+    margin: 30px auto 0;
+    width: 224px; height: 71px;
+    background-color: #000; color: #fff;
+    border-radius: 10px; line-height: 71px;
+    font-size: 1.625rem; font-weight: 700;
+}
+main .bg2 #quiz_popup .btm_info {
+    text-align: center;
+    margin-top: 30px;
+}
+
 /* ------------------------------------------------------ 3 */
 main .bg3 {
     height: 1000px;
@@ -109,7 +196,7 @@ main .bg3 {
     background-repeat: no-repeat;
 }
 main .bg3 div {
-    width: 1250px; margin: 0 auto;
+    width: 100%;
     text-align: center;
 }
 main .bg3 div p:first-child,
@@ -122,16 +209,35 @@ main .bg3 div p:first-child {
 }
 main .bg3 div .tit {font-size: 3.438rem;}
 main .bg3 div .video_area {
-    margin: 62px 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 95px 110px 105px;
 }
-main .bg3 div .video_area iframe {}
+main .bg3 div .video_area iframe {box-shadow: 0 0 30px rgba(255, 20, 60, 0.3);}
+main .bg3 div .video_area iframe:nth-child(2) {
+    width: calc((1920 / 2.5) - 40px);
+    margin: 0 40px;
+}
+main .bg3 div .video_area iframe:first-child,
+main .bg3 div .video_area iframe:last-child {
+    width: 434px; height: 244px;
+}
 main .bg3 div .go_watching {
     background-color: #000; color: #fff;
-    padding: 20px 30px; border-radius: 10px;
+    padding: 20px 60px 20px 40px; border-radius: 10px;
     font-size: 1.625rem;
+    background-image: url(../images/bg3_gocont_arrow.png);
+    background-repeat: no-repeat;
+    background-position: 280px center;
+}
+main .bg3 div .go_watching img {
+    margin-left: 5px;
 }
 main .bg3 div .go_watching:hover {
-    color: #FF143C;
+   background-color: #444;
 }
 /* ------------------------------------------------------ 4-티빙 오리지널 */
 main .bg4 {
@@ -184,13 +290,21 @@ main .bg5 .bg5_section .week_contents {}
 main .bg5 .bg5_section .week_contents p {padding: 0 0 70px; font-size: 2.125rem;}
 main .bg5 .bg5_section .week_contents a {
     display: inline-block;
-    width: 198px; height: 284px; border-radius: 15px;
+    width: 198px; height: 284px;
     background-color: gray;
     margin-right: 60px;
+    border-radius: 15px;
+}
+main .bg5 .bg5_section .week_contents a img {
+    display: inline-block;
+    height: 100%; border-radius: 15px;
+    border: 3px solid #444;
 }
 main .bg5 .bg5_section .week_contents a:last-child {
     margin: 0;
 }
+/* hover 속성 */
+main .bg5 .bg5_section .week_contents a:hover {scale: 1.2;}
 /* ------------------------------------------------------ 6-사용자 최적화 ui 제공 */
 main .bg6 {
     height: 1000px;
@@ -211,8 +325,16 @@ main .bg6 .bg6_section .tit {
     margin: 20px 0 0;
 }
 main .bg6 .bg6_section .img_area {
-    padding: 70px 0 0;
+    width: 809px; margin: 0 auto;
+    padding: 68px 0 0;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
+main .bg6 .bg6_section .img_area img {
+    width: 201px; height: 434px;
+}
+main .bg6 .bg6_section .img_area img:nth-child(2) {width: 227px; height: 491px;}
 /* ------------------------------------------------------ 7-만족도 높은 플랫폼 */
 main .bg7 {
     height: 1000px;
@@ -226,7 +348,7 @@ main .bg7 .bg7_section {
     flex-flow: column wrap;
     align-content: center;
     padding: 123px 0 0;
-    border-top: 1px solid #f00;
+    position: relative;
 }
 main .bg7 .bg7_section .txt_area {
     text-align: center; color: #fff;
@@ -238,9 +360,29 @@ main .bg7 .bg7_section .txt_area .tit {
     font-size: 4.375em; font-weight: 700;
     margin: 20px 0 0;
 }
-main .bg7 .bg7_section .img_area {
-    margin-top: 213px;
+main .bg7 .bg7_section .left,
+main .bg7 .bg7_section .right{
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-align: center;
+    position: absolute;
 }
+
+main .bg7 .bg7_section .left {
+    background-color: #FF143C; color: #fff;
+    top: 481px;
+    left: 0;
+}
+main .bg7 .bg7_section .right {
+    background-color: #00DAEC;
+    top: 642px;
+    right: 0;
+}
+main .bg7 .bg7_section .photo_area {margin-top: 65px;}
+main .bg7 .bg7_section .photo_area img {}
 /* ------------------------------------------------------ 8-트렌드 선도하는 티빙 */
 main .bg8 {
     height: 1000px;
@@ -251,9 +393,10 @@ main .bg8 .bg8_section {
     text-align: center;
 }
 main .bg8 .bg8_section .tit {font-size: 4.375em; font-weight: 700; padding: 180px 0 50px;}
-main .bg8 .bg8_section .video_area {
+main .bg8 .bg8_section .video_area {}
+main .bg8 .bg8_section .video_area iframe {
+    box-shadow: 0 0 30px rgba(255, 20, 60, 0.3);
     width: 812px; height: 457px;
-    background-color: gray;
     margin: 0 auto;
 }
 main .bg8 .bg8_section .btm {
@@ -295,8 +438,28 @@ main .bg9 .bg9_section .sub_tit {font-size: 2.125rem;  margin: 30px 0 0}
 main .bg10 {
     height: 1000px;
     background-image: url(../images/bg_10.jpg);
-    background-repeat: no-repeat;
 }
+main .bg10 .bg10_section {
+    width: 1250px;
+    margin: 0 auto; text-align: center;
+    padding-top: 64px;
+}
+main .bg10 .bg10_section .sub_tit {
+    font-size: 1.625rem;
+    color:#FF143C;
+}
+main .bg10 .bg10_section .tit {
+    margin: 15px 0 75px;
+    display: flex; flex-flow: row nowrap;
+    justify-content: center; align-items: center;
+}
+main .bg10 .bg10_section .tit span {
+    font-size: 4.375rem; font-weight: 700;
+    color:#FF143C;
+    margin: 0 10px;
+}
+main .bg10 .bg10_section .sns_event_area {}
+main .bg10 .bg10_section .sns_event_area img {border-radius: 10px;}
 /* ------------------------------------------------------ 11-지금 구독하세요 */
 main .bg11 {
     height: 1000px;
@@ -321,11 +484,18 @@ main .bg11 .bg11_section p:nth-child(2) {
     font-size: 2.688rem; font-weight: 500;
 }
 main .bg11 .bg11_section a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 445px; padding: 25px 0;
     background-color: #000; color: #fff;
-    padding: 25px 40px;
     border-radius: 29px;
+    margin: 0 auto;
+}
+main .bg11 .bg11_section a span {
     font-size: 3.438rem; font-weight: 700;
 }
+main .bg11 .bg11_section a img {width: 50px; height: 50px; margin-left: 5px;}
 /* ------------------------------------------------------ 12-footer */
 main .bg12 {
     background-color: #000;
@@ -341,6 +511,10 @@ main .bg12 .bg12_section .top {margin-bottom: 80px;}
 main .bg12 .bg12_section .top a {
     color: #fff;
 }
+main .bg12 .bg12_section .top a:hover {
+    color: #FF143C;
+    text-decoration: underline;
+}
 main .bg12 .bg12_section .top a::after {
     content: '';
     width: 1px; height: 14px;
@@ -350,9 +524,6 @@ main .bg12 .bg12_section .top a::after {
 }
 main .bg12 .bg12_section .top a:last-child::after {
     display: none;
-}
-main .bg12 .bg12_section .top a:last-child em {
-    text-decoration: underline;
 }
 main .bg12 .bg12_section .btm_top {
     margin-bottom: 20px;
