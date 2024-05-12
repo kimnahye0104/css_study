@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation - 0510 </title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        button {
+            padding: 20px; border: 0; margin: 20px;
+            background-color: #000; color: #fff;
+        }
+        #btn1 {transition: background-color 1s;}
+        #btn1:hover {
+            background-color: #555;
+            /* hover 이용 css 속성값 변경시 즉시변경 */
+            /* 자연스러운 전환 애니메이션을 원한다면? */
+            /* transition: 애니메이션 적용할 속성 지속시간(단위s : 초); */
+            /* ----#btn1 에 적용------ transition: background-color 1s; */
+            /* 마우스를 올렸을 땐 자연스럽게 변환 성공 */
+            /* 마우스가 나가면 왜 다시 즉시변경될까?*/
+            /* 이유 => transition을 hover 선택자에 썼으니까!!!! */
+        }
+        #btn2 {width: 150px; transition: width  0.5s;}
+        #btn2:hover {width: 200px;}
+        #btn3 {
+            position: relative; left: 0;
+            width: 150px; height: 70px;
+            background-color: blue;
+            transition: all 1s, left 1s 2s;
+            /* transition: 속성 1s, 다음 속성 1s;  세번째 값은 딜레이 시간 */
+        }
+        #btn3:hover {
+            left: 100px;
+            width: 200px;  height: 100px;
+            background-color: pink;
+        }
+        #heart {
+            position: relative;
+            left: 0;
+            transition: left 1s;
+        }
+        #heart img {width: 30px;}
+        #heart:hover {
+            left: 350px;
+        }
+        #heart:hover + .heartbeat {
+            background-color: pink;
+        }
+        .heartbeat {
+            width: 600px; height: 10px; background-color: gray;
+            border-radius: 5px; overflow: hidden;
+        }
+        .heartbeat .movebar{
+            width: 0; height: 10px;
+            border-radius: 5px;
+            transition: width 1s;
+        }
+        .heartbeat .movebar:hover {width: 350px; background-color: pink;}
+    </style>
+</head>
+<body>
+    <h1>css animation</h1>
+    <button type="button" id="btn1">button</button>
+    <hr>
+    <button type="button" id="btn2">button-2</button>
+    <hr>
+    <button type="button" id="btn3">button-3</button>
+    <hr>
+    <p id="heart"><img src="./images/heart.svg" alt=""></p>
+    <div class="heartbeat"><div class="movebar"></div></div>
+</body>
+</html>
